@@ -5,11 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<<<<<<< Updated upstream
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FXMLDocumentController">
-=======
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.mainFXMLControler">
->>>>>>> Stashed changes
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.FXMLDocumentController">
    <children>
       <Button layoutX="471.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="129.0" text="Employee" />
       <Label layoutX="6.0" layoutY="-1.0" text="Rental Cars">

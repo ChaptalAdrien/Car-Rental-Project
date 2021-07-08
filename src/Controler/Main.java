@@ -1,23 +1,25 @@
-package Controler;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Controler;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 
 /**
  *
- * @author Adrien
+ * @author rouss
  */
-<<<<<<< Updated upstream
-public class Main {
-=======
 public class Main extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/View/registerPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/mainPage.fxml"));
         
         Scene scene = new Scene(root);
         
@@ -31,6 +33,5 @@ public class Main extends Application{
     public static void main(String[] args) {
         launch(args);
     }
->>>>>>> Stashed changes
     
 }

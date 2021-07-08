@@ -4,22 +4,22 @@
  * and open the template in the editor.
  */
 package View;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 /**
  *
- * @author Adrien
+ * @author rouss
  */
-public class CarRental extends Application {
-    
+public class Main extends Application{
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
         
         Scene scene = new Scene(root);
         

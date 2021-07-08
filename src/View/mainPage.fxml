@@ -5,10 +5,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FXMLDocumentController">
    <children>
-      <Button layoutX="471.0" mnemonicParsing="false" onAction="#employee" prefHeight="51.0" prefWidth="129.0" text="Employee" />
+      <Button layoutX="471.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="129.0" text="Employee" />
       <Label layoutX="6.0" layoutY="-1.0" text="Rental Cars">
          <font>
             <Font size="35.0" />
@@ -23,7 +22,7 @@
                         <Font size="23.0" />
                      </font>
                   </Label>
-                  <Button layoutX="122.0" layoutY="161.0" mnemonicParsing="false" onAction="#Register" text="Register" />
+                  <Button layoutX="122.0" layoutY="161.0" mnemonicParsing="false" text="Register" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="297.0">
@@ -33,7 +32,7 @@
                         <Font size="23.0" />
                      </font>
                   </Label>
-                  <Button layoutX="123.0" layoutY="161.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+                  <Button layoutX="123.0" layoutY="161.0" mnemonicParsing="false" text="Login" />
                </children>
             </AnchorPane>
         </items>

@@ -5,7 +5,10 @@ import java.util.ArrayList;
 
 
 
-public class Agency {
+public class Agency extends Model {
+    
+    private static final String OBJECT = "Agency";
+    private static final String PRIMARY = "idAgency"; 
     
     private int idAgency;
     private String Adress;

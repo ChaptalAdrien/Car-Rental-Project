@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.31270903010033446" layoutX="1.0" layoutY="66.0" prefHeight="334.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="188.0">
+               <children>
+                  <Text layoutX="21.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+                  <Text layoutX="22.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+                  <Text layoutX="20.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
+                  <Text layoutX="21.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+                  <Text layoutX="21.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+                  <TextField layoutX="20.0" layoutY="43.0" />
+                  <TextField layoutX="20.0" layoutY="98.0" />
+                  <TextField layoutX="20.0" layoutY="154.0" />
+                  <TextField layoutX="20.0" layoutY="205.0" />
+                  <TextField layoutX="20.0" layoutY="259.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="124.0" text="Book a car" />
+      <Text layoutX="522.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Account" />
+   </children>
+</AnchorPane>

@@ -13,7 +13,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
 import java.net.URL;
-import java.time.Instant;
 import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -57,7 +56,7 @@ public class ControllerLogReg implements Initializable {
         String ln = this.lastName.getText();
         String adr = this.adress.getText();
         String pn = this.phoneNumber.getText();
-        Date bd = Date.from(Instant.MIN);
+        Date bd = new java.util.Date();
         String em = this.email.getText();
         String pswd = this.password.getText();
         boolean m = true;

@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public abstract class Model extends Conf {
     
-        private static Connection conn = null;
+        private Connection conn = null;
    
     //init the connexion to the data base         
     public void init(){
@@ -63,6 +63,9 @@ public abstract class Model extends Conf {
     //Save the data into the specified table 
     public void Save(ArrayList data, String table){
         
+        //init database connexion
+        this.init();
+        
         //Putting all values into a string 
         String values = "(";
         
@@ -70,7 +73,7 @@ public abstract class Model extends Conf {
             if(i == data.size() - 1){
                 values += "'" + data.get(i) + "'" + ");";
             }else{
-                values += "'" + data.get(i) + "'";
+                values += "'" + data.get(i) + "'" + ",";
             }
         }
         
@@ -86,7 +89,11 @@ public abstract class Model extends Conf {
  
         } catch (SQLException ex) {
             Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+            this.close();
         }
+        
+        //close database connexion
+        this.close();
         
     }
     

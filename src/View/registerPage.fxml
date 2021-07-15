@@ -4,17 +4,17 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.FXMLDocumentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ControllerLogReg">
    <children>
-      <TextField layoutX="66.0" layoutY="74.0" promptText="First Name" />
-      <TextField layoutX="66.0" layoutY="163.0" promptText="Adress" />
-      <TextField layoutX="66.0" layoutY="118.0" promptText="Last Name" />
-      <TextField layoutX="374.0" layoutY="118.0" promptText="Email" />
-      <TextField layoutX="66.0" layoutY="213.0" promptText="Phone Number" />
-      <DatePicker layoutX="374.0" layoutY="74.0" promptText="Birthday" />
-      <PasswordField layoutX="374.0" layoutY="163.0" promptText="Password" />
-      <Button layoutX="266.0" layoutY="314.0" mnemonicParsing="false" text="Register !" />
+      <TextField fx:id="firstName" layoutX="66.0" layoutY="74.0" promptText="First Name" />
+      <TextField fx:id="adress" layoutX="66.0" layoutY="163.0" promptText="Adress" />
+      <TextField fx:id="adress" layoutX="66.0" layoutY="118.0" promptText="Last Name" />
+      <TextField fx:id="email" layoutX="374.0" layoutY="118.0" promptText="Email" />
+      <TextField fx:id="phoneNumber" layoutX="66.0" layoutY="213.0" promptText="Phone Number" />
+      <DatePicker fx:id="birthDate" layoutX="374.0" layoutY="74.0" promptText="Birthdate" />
+      <PasswordField fx:id="password" layoutX="374.0" layoutY="163.0" promptText="Password" />
+      <Button fx:id="registerButton" layoutX="266.0" layoutY="314.0" mnemonicParsing="false" onAction="#register" text="Register !" />
       <CheckBox layoutX="374.0" layoutY="217.0" mnemonicParsing="false" text="Your a business ?" />
-      <Label id="errorLabel" layoutX="286.0" layoutY="22.0" prefHeight="17.0" prefWidth="0.0" />
+      <Label id="errorLabel" fx:id="label" layoutX="286.0" layoutY="22.0" prefHeight="17.0" prefWidth="0.0" />
    </children>
 </AnchorPane>

@@ -38,8 +38,13 @@ public class ControllerLogReg implements Initializable {
     private TextField email;
     @FXML
     private PasswordField password;
+    @FXML
+    private Button backToMainButton;
+    @FXML
+    private Button loginButton;
 
-   
+
+    //Event
     @FXML
     private void register(ActionEvent event) {
         label.setText("Register Failed");

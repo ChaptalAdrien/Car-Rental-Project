@@ -9,7 +9,8 @@ import java.util.logging.Logger;
 public abstract class Model extends Conf {
     
         private static Connection conn = null;
-        
+   
+    //init the connexion to the data base         
     public void init(){
         
         try {
@@ -28,6 +29,8 @@ public abstract class Model extends Conf {
         } 
     }
     
+    
+    //Close the connexion to the data base
     public void close(){
         try{
             if(conn != null)
@@ -37,9 +40,10 @@ public abstract class Model extends Conf {
             }
     }
     
-    public ArrayList<Object> selectAll(String object){
+    //Select all rows of a designated Table
+    public ResultSet selectAll(String object){
         
-        ArrayList<Object> Data = new ArrayList();
+        ResultSet rs = null;
         
         try {
             
@@ -48,15 +52,43 @@ public abstract class Model extends Conf {
             PreparedStatement preparedStatement = conn.prepareStatement(request);
             preparedStatement.setString(1, object);
                  
-            ResultSet rs = preparedStatement.executeQuery();
+            rs = preparedStatement.executeQuery();
  
         } catch (SQLException ex) {
             Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return Data;
+        return rs;
     }
     
-    
+    //Save the data into the specified table 
+    public void Save(ArrayList data, String table){
+        
+        //Putting all values into a string 
+        String values = "(";
+        
+        for(int i=0; i < data.size(); i++){
+            if(i == data.size() - 1){
+                values += "'" + data.get(i) + "'" + ");";
+            }else{
+                values += "'" + data.get(i) + "'";
+            }
+        }
+        
+        try {
+            
+            String request = "INSERT INTO ? VALUES ?";
+
+            PreparedStatement preparedStatement = conn.prepareStatement(request);
+            preparedStatement.setString(1, table);
+            preparedStatement.setString(2,values);
+                 
+            preparedStatement.executeQuery();
+ 
+        } catch (SQLException ex) {
+            Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
     
 }
     

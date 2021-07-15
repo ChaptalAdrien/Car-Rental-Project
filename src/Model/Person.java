@@ -3,15 +3,15 @@ package Model;
 
 import java.util.Date;
 
-public abstract class Person {
+public abstract class Person extends Model {
     
     protected String firstName;
     protected String lastName;
     protected String adress;
     protected String phoneNumber;
     protected Date birthDate;
-    protected String email;
     protected String password;
+    protected String email;
     
    
 }

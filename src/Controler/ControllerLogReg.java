@@ -34,36 +34,36 @@ public class ControllerLogReg implements Initializable {
     private Label label;
 
     @FXML
-    private TextField firstNameTF;
+    private TextField firstName;
     @FXML
-    private TextField lastNameTF;
+    private TextField lastName;
     @FXML
-    private TextField adressTF;
+    private TextField adress;
     @FXML
-    private TextField phoneNumberTF;
+    private TextField phoneNumber;
     @FXML
-    private DatePicker bithDateDP;
+    private DatePicker bithDate;
     @FXML
-    private TextField emailTF;
+    private TextField email;
     @FXML
-    private PasswordField passwordPF;
+    private PasswordField password;
 
    
     @FXML
     private void register(ActionEvent event) {
         
         int id = (int) (Math.random() * ( 100000000 - 0 ));
-        String firstName = this.firstNameTF.getText();
-        String lastName = this.lastNameTF.getText();
-        String adress = this.adressTF.getText();
-        String phoneNumberTF = this.phoneNumberTF.getText();
-        Date birthDate = Date.from(Instant.MIN);
-        String email = this.emailTF.getText();
-        String Password = this.passwordPF.getText();
-        boolean member = true;
-        boolean customerType = false;
+        String fn = this.firstName.getText();
+        String ln = this.lastName.getText();
+        String adr = this.adress.getText();
+        String pn = this.phoneNumber.getText();
+        Date bd = Date.from(Instant.MIN);
+        String em = this.email.getText();
+        String pswd = this.password.getText();
+        boolean m = true;
+        boolean ct = false;
         
-        Customer c = new Customer(id,firstName,lastName, adress,birthDate,member, customerType, Password, email);
+        Customer c = new Customer(id,fn,ln, adr,bd,m, ct, pswd, em);
         
         c.register();
         

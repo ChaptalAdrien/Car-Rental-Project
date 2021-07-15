@@ -15,6 +15,6 @@
       <PasswordField fx:id="password" layoutX="374.0" layoutY="163.0" promptText="Password" />
       <Button fx:id="registerButton" layoutX="266.0" layoutY="314.0" mnemonicParsing="false" onAction="#register" text="Register !" />
       <CheckBox layoutX="374.0" layoutY="217.0" mnemonicParsing="false" text="Your a business ?" />
-      <Label id="errorLabel" fx:id="label" layoutX="286.0" layoutY="22.0" prefHeight="17.0" prefWidth="0.0" />
+      <Label id="errorLabel" fx:id="label" layoutX="246.0" layoutY="288.0" prefHeight="17.0" prefWidth="106.0" />
    </children>
 </AnchorPane>

@@ -38,18 +38,19 @@
                         </ImageView>
                         <Label layoutX="117.0" layoutY="20.0" text="Agency Name" />
                         <Label layoutX="117.0" layoutY="41.0" text="Location" />
-                        <Button layoutX="322.0" layoutY="25.0" mnemonicParsing="false" text="Select" />
+                        <Button fx:id="select" layoutX="322.0" layoutY="25.0" mnemonicParsing="false" text="Select" />
                      </children>
                   </AnchorPane>
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-      <TextField layoutX="182.0" layoutY="24.0" promptText="Search bar" />
+      <TextField fx:id="searchbar" layoutX="182.0" layoutY="24.0" promptText="Search bar" />
       <Label layoutX="20.0" layoutY="23.0" text="Select an agency">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+      <Button fx:id="back" layoutX="525.0" layoutY="24.0" mnemonicParsing="false" text="Back" />
    </children>
 </AnchorPane>

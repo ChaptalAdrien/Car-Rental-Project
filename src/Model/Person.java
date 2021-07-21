@@ -1,7 +1,9 @@
 
 package Model;
 
-import java.util.Date;
+import java.time.LocalDate;
+
+
 
 public abstract class Person extends Model {
     
@@ -9,7 +11,7 @@ public abstract class Person extends Model {
     protected String lastName;
     protected String adress;
     protected String phoneNumber;
-    protected Date birthDate;
+    protected LocalDate birthDate;
     protected String password;
     protected String email;
     

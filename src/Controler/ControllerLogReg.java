@@ -13,7 +13,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
 import java.net.URL;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,7 +41,7 @@ public class ControllerLogReg implements Initializable {
     @FXML
     private TextField phoneNumber;
     @FXML
-    private DatePicker bithDate;
+    private DatePicker birthDate;
     @FXML
     private TextField email;
     @FXML
@@ -56,13 +56,13 @@ public class ControllerLogReg implements Initializable {
         String ln = this.lastName.getText();
         String adr = this.adress.getText();
         String pn = this.phoneNumber.getText();
-        Date bd = new java.util.Date();
+        LocalDate bd = this.birthDate.getValue();
         String em = this.email.getText();
         String pswd = this.password.getText();
         boolean m = true;
         boolean ct = false;
         
-        Customer c = new Customer(id,fn,ln, adr,bd,m, ct, pswd, em);
+        Customer c = new Customer(id,fn,ln, pn, adr,bd,m, ct, pswd, em);
         
         c.register();
         

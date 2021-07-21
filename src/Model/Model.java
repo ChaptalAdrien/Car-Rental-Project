@@ -2,6 +2,7 @@ package Model;
 
 import java.sql.*;
 import Conf.Conf;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -66,26 +67,37 @@ public abstract class Model extends Conf {
         //init database connexion
         this.init();
         
+        
+        String request = "INSERT INTO " + table + " VALUES (";
+        
         //Putting all values into a string 
-        String values = "(";
+ 
         
         for(int i=0; i < data.size(); i++){
             if(i == data.size() - 1){
-                values += "'" + data.get(i) + "'" + ");";
+ 
+                request += "?);";
             }else{
-                values += "'" + data.get(i) + "'" + ",";
+             
+                request += "?, ";
             }
+            
         }
         
         try {
             
-            String request = "INSERT INTO ? VALUES ?";
+            
 
             PreparedStatement preparedStatement = conn.prepareStatement(request);
-            preparedStatement.setString(1, table);
-            preparedStatement.setString(2,values);
-                 
-            preparedStatement.executeQuery();
+
+            for(int i=0; i < data.size(); i++){
+                if(data.get(i) instanceof String){
+                    preparedStatement.setString(i + 1, (String) data.get(i));
+                }else{
+                    preparedStatement.setInt(i+1, (int) data.get(i));
+                }
+            }
+            preparedStatement.executeUpdate();
  
         } catch (SQLException ex) {
             Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);

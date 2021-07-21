@@ -7,51 +7,27 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <SplitPane dividerPositions="0.2809364548494983" layoutY="62.0" prefHeight="332.0" prefWidth="600.0">
-         <items>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="151.0" prefWidth="155.0" style="-fx-background-color: #bac2d1;">
-                     <children>
-                        <Label layoutX="14.0" layoutY="14.0" text="Agency" />
-                        <Label layoutX="20.0" layoutY="47.0" text="Location" />
-                        <Label layoutX="20.0" layoutY="76.0" text="Date" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="5.0" layoutY="163.0" prefHeight="162.0" prefWidth="155.0" style="-fx-background-color: #bac2d1;">
-                     <children>
-                        <Label layoutX="15.0" layoutY="73.0" text="Model" />
-                        <Label layoutX="16.0" layoutY="42.0" text="Brand" />
-                        <Label layoutX="14.0" layoutY="14.0" text="Car" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="82.0" prefWidth="399.0" style="-fx-background-color: #bac2d1;">
-                     <children>
-                        <ImageView fitHeight="68.0" fitWidth="75.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../Images/FondEcran/waporwave-5170440_1920.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="117.0" layoutY="20.0" text="Brand" />
-                        <Label layoutX="117.0" layoutY="41.0" text="Model" />
-                        <Button layoutX="322.0" layoutY="25.0" mnemonicParsing="false" text="Select" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
-         </items>
-      </SplitPane>
-      <Label layoutX="24.0" layoutY="24.0" text="Select a cars">
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@mainBackground.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="21.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0cb81;" text="Pro">
          <font>
-            <Font size="18.0" />
+            <Font name="Agency FB" size="12.0" />
          </font>
-      </Label>
-      <TextField layoutX="182.0" layoutY="25.0" promptText="Search bar" />
+      </Button>
+      <Button layoutX="476.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0cb81;" text="Login/Register">
+         <font>
+            <Font name="Agency FB" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="394.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #db9f27;" text="Next">
+         <font>
+            <Font name="Agency FB" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -15,6 +15,6 @@
             <Font size="35.0" />
          </font>
       </Label>
-      <Button layoutX="499.0" layoutY="22.0" mnemonicParsing="false" text="Back To Main" />
+      <Button fx:id="backToMainButton" layoutX="499.0" layoutY="22.0" mnemonicParsing="false" text="Back To Main" />
    </children>
 </AnchorPane>

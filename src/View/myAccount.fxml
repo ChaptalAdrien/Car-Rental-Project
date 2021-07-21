@@ -5,7 +5,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.31270903010033446" layoutX="1.0" layoutY="66.0" prefHeight="334.0" prefWidth="600.0">
@@ -17,7 +16,7 @@
                   <Text layoutX="20.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
                   <Text layoutX="21.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
                   <Text layoutX="21.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-                  <TextField layoutX="20.0" layoutY="43.0" />
+                  <TextField fx:id="firstName" layoutX="20.0" layoutY="43.0" />
                   <TextField layoutX="20.0" layoutY="98.0" />
                   <TextField layoutX="20.0" layoutY="154.0" />
                   <TextField layoutX="20.0" layoutY="205.0" />
@@ -35,7 +34,7 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="124.0" text="Book a car" />
+      <Button fx:id="bookCars" mnemonicParsing="false" prefHeight="66.0" prefWidth="124.0" text="Book a car" />
       <Text layoutX="522.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Account" />
    </children>
 </AnchorPane>

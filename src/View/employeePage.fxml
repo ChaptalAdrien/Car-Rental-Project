@@ -5,16 +5,15 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.EmployeeController">
    <children>
       <ToolBar prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #bac2d1;">
         <items>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Administration Tool Bar" />
-          <Button mnemonicParsing="false" text="Members" />
-            <Button mnemonicParsing="false" text="Cars" />
-            <Button mnemonicParsing="false" text="Angecies" />
-            <Button mnemonicParsing="false" text="Statistics" />
+          <Button fx:id="members" mnemonicParsing="false" text="Members" />
+            <Button fx:id="cars" mnemonicParsing="false" text="Cars" />
+            <Button fx:id="agencies" mnemonicParsing="false" text="Angecies" />
+            <Button fx:id="statistics" mnemonicParsing="false" text="Statistics" />
         </items>
       </ToolBar>
       <AnchorPane layoutX="6.0" layoutY="48.0" prefHeight="346.0" prefWidth="588.0" style="-fx-background-color: #bac2d1;" />

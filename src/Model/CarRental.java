@@ -1,7 +1,7 @@
 
 package Model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 
 public class CarRental {
@@ -10,8 +10,8 @@ public class CarRental {
     private Customer custommer;
     private Car car;
     private Discount discount;
-    private Date rentalDate;
-    private Date returnDate;
+    private LocalDate  rentalDate;
+    private LocalDate returnDate;
     private  Agency pickUpAgency;
     private Agency returnAgency;
     

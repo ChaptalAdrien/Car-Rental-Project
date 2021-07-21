@@ -20,35 +20,21 @@ import javafx.scene.control.Button;
  *
  * @author rouss
  */
-public class ControllerLogReg implements Initializable {
+public class EmployeeController implements Initializable {
     
     @FXML
-    private Label label;
-
+    private Button members;
     @FXML
-    private TextField firstName;
+    private Button cars;
     @FXML
-    private TextField lastName;
+    private Button agencies;
     @FXML
-    private TextField adress;
-    @FXML
-    private TextField phoneNumber;
-    @FXML
-    private DatePicker bithDate;
-    @FXML
-    private TextField email;
-    @FXML
-    private PasswordField password;
-    @FXML
-    private Button backToMainButton;
-    @FXML
-    private Button loginButton;
-
+    private Button statistics;
 
     //Event
     @FXML
     private void register(ActionEvent event) {
-        label.setText("Register Failed");
+        
     }
     
 

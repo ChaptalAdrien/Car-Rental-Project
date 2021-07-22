@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.FXMLDocumentController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="email" layoutX="226.0" layoutY="133.0" promptText="Email" />
-      <PasswordField fx:id="password" layoutX="226.0" layoutY="200.0" promptText="Password" />
-      <Button fx:id="loginButton" layoutX="275.0" layoutY="258.0" mnemonicParsing="false" onAction="#login" text="Log in" />
-      <Label layoutX="16.0" layoutY="9.0" text="Rental Cars">
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@mainBackground.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="267.0" layoutY="274.0" mnemonicParsing="false" style="-fx-background-color: #db9F27;" text="Login">
          <font>
-            <Font size="35.0" />
+            <Font name="Agency FB" size="20.0" />
          </font>
-      </Label>
-      <Button fx:id="backToMainButton" layoutX="499.0" layoutY="22.0" mnemonicParsing="false" text="Back To Main" />
+      </Button>
+      <PasswordField layoutX="207.0" layoutY="207.0" promptText="Password">
+         <font>
+            <Font name="Agency FB" size="23.0" />
+         </font>
+      </PasswordField>
+      <TextField layoutX="207.0" layoutY="130.0" promptText="Login">
+         <font>
+            <Font name="Agency FB" size="23.0" />
+         </font>
+      </TextField>
+      <Button layoutX="157.0" layoutY="355.0" mnemonicParsing="false" style="-fx-background-color: #db9F27;" text="Back">
+         <font>
+            <Font name="Agency FB" size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

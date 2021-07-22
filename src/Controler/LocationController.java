@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controler;
 
+package Controler;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -13,31 +13,38 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 
 /**
  *
- * @author Adrien
+ * @author rouss
  */
-public class FXMLDocumentController implements Initializable {
-    
+public class LocationController implements Initializable {
+
+    //Button
     @FXML
-    private Label label;
+    private Button bookAcar;
     @FXML
-    private TextField searchbar;
+    private Button logreg;
     @FXML
-    private Button select;
+    private Button pro;
     @FXML
-    private Button back;
+    private Button next;
+
+    //TextField
+    //Combo Box
+    @FXML
+    private ComboBox comboAgency;
 
 
+    //Actions Button Book A Car
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
-    
+    public void ButtonNext(ActionEvent event){
+        
+}
+
+    //MAIN
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    }    
-    
+    }   
 }

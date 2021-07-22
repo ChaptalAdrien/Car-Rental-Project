@@ -28,7 +28,7 @@ import javafx.scene.control.Button;
  *
  * @author rouss
  */
-public class ControllerLogReg implements Initializable {
+public class LogRegController implements Initializable {
     
     @FXML
     private Label label;

@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ControllerLogReg">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="firstName" layoutX="66.0" layoutY="74.0" promptText="First Name" />
-      <TextField fx:id="adress" layoutX="66.0" layoutY="163.0" promptText="Adress" />
-      <TextField fx:id="lastName" layoutX="66.0" layoutY="118.0" promptText="Last Name" />
-      <TextField fx:id="email" layoutX="374.0" layoutY="118.0" promptText="Email" />
-      <TextField fx:id="phoneNumber" layoutX="66.0" layoutY="213.0" promptText="Phone Number" />
-      <DatePicker fx:id="birthDate" layoutX="374.0" layoutY="74.0" promptText="Birthdate" />
-      <PasswordField fx:id="password" layoutX="374.0" layoutY="163.0" promptText="Password" />
-      <Button fx:id="registerButton" layoutX="266.0" layoutY="314.0" mnemonicParsing="false" onAction="#register" text="Register !" />
-      <CheckBox layoutX="374.0" layoutY="217.0" mnemonicParsing="false" text="Your a business ?" />
-      <Label id="errorLabel" fx:id="label" layoutX="246.0" layoutY="288.0" prefHeight="17.0" prefWidth="106.0" />
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@mainBackground.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="207.0" layoutY="26.0" promptText="Firsst name" />
+      <TextField layoutX="207.0" layoutY="65.0" promptText="Last name" />
+      <TextField layoutX="207.0" layoutY="104.0" promptText="Address" />
+      <TextField layoutX="207.0" layoutY="144.0" promptText="Phone number" />
+      <DatePicker layoutX="207.0" layoutY="185.0" prefHeight="31.0" prefWidth="187.0" promptText="Bithdate" />
+      <TextField layoutX="207.0" layoutY="225.0" promptText="Email" />
+      <PasswordField layoutX="207.0" layoutY="264.0" promptText="Password" />
+      <Button layoutX="263.0" layoutY="312.0" mnemonicParsing="false" text="Register" />
+      <Button layoutX="153.0" layoutY="355.0" mnemonicParsing="false" text="Back" />
+      <Label layoutX="222.0" layoutY="360.0" prefHeight="21.0" prefWidth="157.0" />
    </children>
 </AnchorPane>

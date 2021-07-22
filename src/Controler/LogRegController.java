@@ -30,9 +30,11 @@ import javafx.scene.control.Button;
  */
 public class LogRegController implements Initializable {
     
+    //Display
     @FXML
     private Label label;
 
+    //Register
     @FXML
     private TextField firstName;
     @FXML
@@ -52,6 +54,11 @@ public class LogRegController implements Initializable {
     @FXML
     private Button loginButton;
 
+    //Login
+    @FXML
+    private TextField login;
+    @FXML
+    private Button logIn;
 
     //Event
     @FXML

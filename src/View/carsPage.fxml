@@ -6,25 +6,24 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.LocationController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0">
          <image>
             <Image url="@mainBackground.png" />
          </image>
       </ImageView>
-      <Button layoutX="21.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0cb81;" text="Pro">
+      <Button fx:id="pro" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0cb81;" text="Pro">
          <font>
             <Font name="Agency FB" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="476.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0cb81;" text="Login/Register">
+      <Button fx:id="logreg" layoutX="476.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0cb81;" text="Login/Register">
          <font>
             <Font name="Agency FB" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="394.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #db9f27;" text="Next">
+      <Button fx:id="next" layoutX="394.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #db9f27;" text="Next">
          <font>
             <Font name="Agency FB" size="15.0" />
          </font>

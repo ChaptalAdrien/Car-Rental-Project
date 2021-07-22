@@ -5,23 +5,22 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.LogRegController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0">
          <image>
             <Image url="@mainBackground.png" />
          </image>
       </ImageView>
-      <TextField layoutX="207.0" layoutY="26.0" promptText="Firsst name" />
-      <TextField layoutX="207.0" layoutY="65.0" promptText="Last name" />
-      <TextField layoutX="207.0" layoutY="104.0" promptText="Address" />
-      <TextField layoutX="207.0" layoutY="144.0" promptText="Phone number" />
-      <DatePicker layoutX="207.0" layoutY="185.0" prefHeight="31.0" prefWidth="187.0" promptText="Bithdate" />
-      <TextField layoutX="207.0" layoutY="225.0" promptText="Email" />
-      <PasswordField layoutX="207.0" layoutY="264.0" promptText="Password" />
-      <Button layoutX="263.0" layoutY="312.0" mnemonicParsing="false" text="Register" />
-      <Button layoutX="153.0" layoutY="355.0" mnemonicParsing="false" text="Back" />
+      <TextField fx:id="firstName" layoutX="207.0" layoutY="26.0" promptText="Firsst name" />
+      <TextField fx:id="lastName" layoutX="207.0" layoutY="65.0" promptText="Last name" />
+      <TextField fx:id="adress" layoutX="207.0" layoutY="104.0" promptText="Address" />
+      <TextField fx:id="phoneNumber" layoutX="207.0" layoutY="144.0" promptText="Phone number" />
+      <DatePicker fx:id="birthDate" layoutX="207.0" layoutY="185.0" prefHeight="31.0" prefWidth="149.0" promptText="Bithdate" />
+      <TextField fx:id="email" layoutX="207.0" layoutY="225.0" promptText="Email" />
+      <PasswordField fx:id="password" layoutX="207.0" layoutY="264.0" promptText="Password" />
+      <Button fx:id="registerButton" layoutX="263.0" layoutY="312.0" mnemonicParsing="false" onAction="#register" text="Register" />
+      <Button fx:id="backToMainButton" layoutX="153.0" layoutY="355.0" mnemonicParsing="false" text="Back" />
       <Label layoutX="222.0" layoutY="360.0" prefHeight="21.0" prefWidth="157.0" />
    </children>
 </AnchorPane>

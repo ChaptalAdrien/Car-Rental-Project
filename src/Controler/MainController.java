@@ -28,6 +28,10 @@ public class MainController implements Initializable{
     private Button cars;
     @FXML
     private Button agencies;
+    @FXML
+    private Button register;
+    @FXML
+    private Button login;
 
 
     @Override

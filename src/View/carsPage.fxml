@@ -6,27 +6,71 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.LocationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.LocationController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0">
+      <ImageView fitHeight="720.0" fitWidth="1080.0">
          <image>
             <Image url="@mainBackground.png" />
          </image>
       </ImageView>
-      <Button fx:id="pro" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0cb81;" text="Pro">
+      <Button fx:id="pro" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="181.0" text="Pro">
          <font>
             <Font name="Agency FB" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="logreg" layoutX="476.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0cb81;" text="Login/Register">
+      <Button fx:id="logreg" layoutX="916.0" layoutY="12.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="156.0" text="Login/Register">
          <font>
             <Font name="Agency FB" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="next" layoutX="394.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #db9f27;" text="Next">
+      <Button fx:id="next" layoutX="835.0" layoutY="678.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" text="Next">
          <font>
             <Font name="Agency FB" size="15.0" />
          </font>
       </Button>
+      <AnchorPane layoutX="277.0" layoutY="26.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="200.0" layoutX="14.0" layoutY="20.0">
+               <image>
+                  <Image url="@daciaSandero.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="211.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DACIA SANDERO" wrappingWidth="106.298828125" />
+            <Button layoutX="432.0" layoutY="61.0" mnemonicParsing="false" text="Select" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="276.0" layoutY="185.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="189.0" layoutX="14.0" layoutY="18.0">
+               <image>
+                  <Image url="@peugeot208.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="217.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PEUGEOT 208" wrappingWidth="147.671875" />
+            <Button layoutX="433.0" layoutY="61.0" mnemonicParsing="false" text="Select" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="276.0" layoutY="342.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
+         <children>
+            <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="7.0" layoutY="7.0">
+               <image>
+                  <Image url="@mercedes4x4.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="217.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MERCEDES 4x4" wrappingWidth="106.298828125" />
+            <Button layoutX="433.0" layoutY="61.0" mnemonicParsing="false" text="Select" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="277.0" layoutY="509.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
+         <children>
+            <ImageView fitHeight="114.0" fitWidth="200.0" layoutX="14.0" layoutY="16.0">
+               <image>
+                  <Image url="@rollsRoyce.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="220.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROLLS ROYCE GHOST" />
+            <Button layoutX="430.0" layoutY="61.0" mnemonicParsing="false" text="Select" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

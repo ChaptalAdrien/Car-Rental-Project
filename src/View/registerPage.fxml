@@ -5,22 +5,26 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.LogRegController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../Controler/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.LogRegController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0">
+      <ImageView fitHeight="720.0" fitWidth="1080.0" preserveRatio="true">
          <image>
             <Image url="@mainBackground.png" />
          </image>
       </ImageView>
-      <TextField fx:id="firstName" layoutX="207.0" layoutY="26.0" promptText="Firsst name" />
-      <TextField fx:id="lastName" layoutX="207.0" layoutY="65.0" promptText="Last name" />
-      <TextField fx:id="adress" layoutX="207.0" layoutY="104.0" promptText="Address" />
-      <TextField fx:id="phoneNumber" layoutX="207.0" layoutY="144.0" promptText="Phone number" />
-      <DatePicker fx:id="birthDate" layoutX="207.0" layoutY="185.0" prefHeight="31.0" prefWidth="149.0" promptText="Bithdate" />
-      <TextField fx:id="email" layoutX="207.0" layoutY="225.0" promptText="Email" />
-      <PasswordField fx:id="password" layoutX="207.0" layoutY="264.0" promptText="Password" />
-      <Button fx:id="registerButton" layoutX="263.0" layoutY="312.0" mnemonicParsing="false" onAction="#register" text="Register" />
-      <Button fx:id="backToMainButton" layoutX="153.0" layoutY="355.0" mnemonicParsing="false" text="Back" />
-      <Label layoutX="222.0" layoutY="360.0" prefHeight="21.0" prefWidth="157.0" />
+      <AnchorPane layoutX="357.0" layoutY="86.0" prefHeight="548.0" prefWidth="373.0">
+         <children>
+            <TextField fx:id="firstName" layoutX="102.0" layoutY="96.0" promptText="Firsst name" />
+            <TextField fx:id="lastName" layoutX="102.0" layoutY="135.0" promptText="Last name" />
+            <TextField fx:id="adress" layoutX="102.0" layoutY="174.0" promptText="Address" />
+            <TextField fx:id="phoneNumber" layoutX="102.0" layoutY="214.0" promptText="Phone number" />
+            <DatePicker fx:id="birthDate" layoutX="102.0" layoutY="255.0" prefHeight="31.0" prefWidth="149.0" promptText="Bithdate" />
+            <TextField fx:id="email" layoutX="102.0" layoutY="295.0" promptText="Email" />
+            <PasswordField fx:id="password" layoutX="102.0" layoutY="334.0" promptText="Password" />
+            <Button fx:id="registerButton" layoutX="147.0" layoutY="382.0" mnemonicParsing="false" onAction="#register" text="Register" />
+            <Button fx:id="backToMainButton" layoutX="14.0" layoutY="509.0" mnemonicParsing="false" text="Back" />
+            <Label layoutX="98.0" layoutY="407.0" prefHeight="21.0" prefWidth="157.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

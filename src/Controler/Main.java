@@ -19,11 +19,12 @@ public class Main extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/View/registerPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/carsPage.fxml"));
         
         Scene scene = new Scene(root);
-        
+
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

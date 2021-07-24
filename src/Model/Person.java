@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public abstract class Person extends Model {
     
-    private static Person userConnected = null;
+    public static Person userConnected = null;
     
     protected String firstName;
     protected String lastName;

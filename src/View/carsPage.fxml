@@ -31,7 +31,7 @@
                </image>
             </ImageView>
             <Text layoutX="211.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DACIA SANDERO" wrappingWidth="106.298828125" />
-            <Button layoutX="432.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS1" text="Select" />
+            <Button fx:id="select1" layoutX="432.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS1" text="Select" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="276.0" layoutY="185.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
@@ -42,7 +42,7 @@
                </image>
             </ImageView>
             <Text layoutX="217.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PEUGEOT 208" wrappingWidth="147.671875" />
-            <Button layoutX="433.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS2" text="Select" />
+            <Button fx:id="select2" layoutX="433.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS2" text="Select" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="276.0" layoutY="342.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
@@ -53,7 +53,7 @@
                </image>
             </ImageView>
             <Text layoutX="217.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MERCEDES 4x4" wrappingWidth="106.298828125" />
-            <Button layoutX="433.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS3" text="Select" />
+            <Button fx:id="select3" layoutX="433.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS3" text="Select" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="277.0" layoutY="509.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
@@ -64,8 +64,9 @@
                </image>
             </ImageView>
             <Text layoutX="220.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROLLS ROYCE GHOST" />
-            <Button layoutX="430.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS4" text="Select" />
+            <Button fx:id="select4" layoutX="430.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS4" text="Select" />
          </children>
       </AnchorPane>
+      <Label fx:id="label" layoutX="316.0" layoutY="675.0" prefHeight="17.0" prefWidth="449.0" />
    </children>
 </AnchorPane>

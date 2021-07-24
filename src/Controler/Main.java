@@ -22,9 +22,10 @@ public class Main extends Application{
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/View/startPage.fxml"));
         
-        Scene scene = new Scene(root);
+        Scene mainScene = new Scene(root);
         
-        stage.setScene(scene);
+        stage.setTitle("RENTAL CAR");
+        stage.setScene(mainScene);
         stage.setResizable(false);
         stage.show();
         //stage.setOnCloseRequest(e -> Platform.exit());

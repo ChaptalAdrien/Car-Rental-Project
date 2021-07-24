@@ -5,6 +5,12 @@
  */
 
 package Controler;
+import Controler.Main;
+import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.application.Application;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -15,11 +21,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 
+
+import java.io.IOException;
+
+
 /**
  *
  * @author rouss
  */
-public class LocationController implements Initializable {
+public class LocationController implements Initializable{
 
     //Button
     @FXML
@@ -39,9 +49,44 @@ public class LocationController implements Initializable {
 
     //Actions Button Book A Car
     @FXML
-    public void ButtonNext(ActionEvent event){
-        
-}
+    public void ButtonBookCar(ActionEvent event) throws Exception {             
+        try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+    }
+
+    //Actions Login
+    @FXML
+    public void ButtonLoginReg(ActionEvent event) throws Exception {             
+        try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+    }
+    //Actions Pro
+    @FXML
+    public void ButtonPro(ActionEvent event) throws Exception {             
+        try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+    }
 
     //MAIN
     @Override

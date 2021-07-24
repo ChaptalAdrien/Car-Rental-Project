@@ -41,10 +41,9 @@ public class LocationController implements Initializable{
     @FXML 
     private Label emailDisplay;
 
-    //TextField
-    //Combo Box
+    //Page Checkout
     @FXML
-    private ComboBox comboAgency;
+    private Label promptSelection;
 
 
     //Actions Button Book A Car
@@ -150,6 +149,7 @@ public class LocationController implements Initializable{
            e.printStackTrace();
           }
     }
+    
 
     //MAIN
     @Override

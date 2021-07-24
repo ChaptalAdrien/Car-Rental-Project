@@ -79,7 +79,7 @@ public class LogRegController implements Initializable {
     //Event
     @FXML
     private void register(ActionEvent event) throws Exception {
-        
+        try{
         String fn = this.firstName.getText();
         String ln = this.lastName.getText();
         String adr = this.adress.getText();
@@ -93,8 +93,21 @@ public class LogRegController implements Initializable {
         Customer c = new Customer(em,fn,ln, pn, adr,bd,m, ct, pswd);
         
         c.register();
+        try {
+        Stage stage1 = (Stage) backToMainButton.getScene().getWindow();
+        stage1.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+        }
         
-        //label.setText("Register Failed");
+        }   catch(Exception e) {
+            //label.setText("Register Failed");
+        }
     }
     
     @FXML

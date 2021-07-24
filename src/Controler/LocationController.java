@@ -49,6 +49,8 @@ public class LocationController implements Initializable{
     @FXML
     public void ButtonBookCar(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) logreg.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -61,8 +63,10 @@ public class LocationController implements Initializable{
 
     //Actions Login
     @FXML
-    public void ButtonLoginReg(ActionEvent event) throws Exception {             
+    public void ButtonLoginReg(ActionEvent event) throws Exception {
         try {
+        Stage stage1 = (Stage) logreg.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -76,6 +80,8 @@ public class LocationController implements Initializable{
     @FXML
     public void ButtonPro(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) logreg.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -89,6 +95,8 @@ public class LocationController implements Initializable{
     @FXML
     public void ButtonNext(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) logreg.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -103,6 +111,8 @@ public class LocationController implements Initializable{
     @FXML
     public void ButtonS1(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) logreg.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -115,6 +125,8 @@ public class LocationController implements Initializable{
     @FXML
     public void ButtonS2(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) logreg.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -127,6 +139,8 @@ public class LocationController implements Initializable{
     @FXML
     public void ButtonS3(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) logreg.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -139,6 +153,8 @@ public class LocationController implements Initializable{
     @FXML
     public void ButtonS4(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) logreg.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();

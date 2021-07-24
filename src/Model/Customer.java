@@ -11,14 +11,13 @@ public class Customer extends Person {
     
     private static String tableName = "customers";
     
-    private int idCustomer;
     private boolean member;
     private boolean customerType; //0 is particular, 1 is business
     private String Password; // Always hash + seed 
 
-    public Customer(int idCustomer, String firstName, String lastName, String phoneNumber, String adress, LocalDate birthDate, boolean member, boolean customerType, String Password, String email) {
+    public Customer(String email, String firstName, String lastName, String phoneNumber, String adress, LocalDate birthDate, boolean member, boolean customerType, String Password) {
         
-        this.idCustomer = idCustomer;
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
@@ -37,7 +36,7 @@ public class Customer extends Person {
     public void register(){
         
         ArrayList data = new ArrayList();
-        data.add(this.idCustomer);
+        data.add(this.email);
         data.add(this.firstName);
         data.add(this.lastName);
         data.add(this.phoneNumber);
@@ -48,7 +47,7 @@ public class Customer extends Person {
         int ct = this.customerType ? 1 : 0;
         data.add(ct);
         data.add(this.Password);
-        data.add(this.email);
+
         
         this.Save(data, Customer.tableName);
         

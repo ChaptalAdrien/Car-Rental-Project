@@ -7,7 +7,7 @@ package Controler;
 
 import Model.Customer;
 import Conf.Security;
-import Model.Person;
+import Model.Person.*;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -140,10 +140,11 @@ public class LogRegController implements Initializable {
            e.printStackTrace();
         }
     }
-    public void ButtonChangePwd(ActionEvent event) throws Exception {             
-        String pswd = Security.hashSaltPswd(this.password.getText());
+    public void ButtonChangePwd(ActionEvent event) throws Exception{
+        firstName.setText(Person.userConnected.getfirstName());
+        String newPswd = Security.hashSaltPswd(this.newPassword.getText());
+        
     }
-    public void 
 
 
     @Override

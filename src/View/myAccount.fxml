@@ -24,7 +24,7 @@
       <Text layoutX="466.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress" wrappingWidth="90.13671875" />
       <Text layoutX="466.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" wrappingWidth="90.13671875" />
       <Text layoutX="466.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" wrappingWidth="90.13671875" />
-      <Text layoutX="466.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change password : " wrappingWidth="132.13671875" />
+      <Text layoutX="466.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change password : " wrappingWidth="132.13671875" />
       <Button fx:id="change" layoutX="630.0" layoutY="531.0" mnemonicParsing="false" onAction="#ButtonChangePwd" text="Change !" />
       <Label layoutX="630.0" layoutY="556.0" prefHeight="17.0" prefWidth="64.0" />
       <Text layoutX="492.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Account">
@@ -32,7 +32,6 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <PasswordField fx:id="password" layoutX="465.0" layoutY="500.0" promptText="Old password" />
-      <PasswordField layoutX="465.0" layoutY="531.0" promptText="New password" />
+      <PasswordField fx:id="newPassword" layoutX="465.0" layoutY="531.0" promptText="New password" />
    </children>
 </AnchorPane>

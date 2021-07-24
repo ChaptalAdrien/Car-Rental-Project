@@ -101,7 +101,6 @@ public class LogRegController implements Initializable {
     @FXML
     public void ButtonBack(ActionEvent event) throws Exception {             
         Stage stage = (Stage) backToMainButton.getScene().getWindow();
-         // do what you have to do
         stage.close();
     }
     

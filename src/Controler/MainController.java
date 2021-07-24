@@ -42,6 +42,8 @@ public class MainController implements Initializable{
     @FXML
     public void ButtonLogin(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) register.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/loginPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
@@ -55,6 +57,8 @@ public class MainController implements Initializable{
     @FXML
     public void ButtonRegister(ActionEvent event) throws Exception {             
         try {
+        Stage stage1 = (Stage) register.getScene().getWindow();
+        stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/registerPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();

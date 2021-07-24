@@ -23,6 +23,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+import Model.Person.*;
 
 
 /**
@@ -50,6 +51,8 @@ public class LocationController implements Initializable{
     private Button select4;
     @FXML 
     private Label emailDisplay;
+    @FXML 
+    private Label userStatus;
 
 
     //Page Checkout
@@ -67,6 +70,8 @@ public class LocationController implements Initializable{
     private DatePicker expDate;
     @FXML
     private TextField ccv;
+    @FXML
+    private Button myAccount;
 
 
 
@@ -202,8 +207,29 @@ public class LocationController implements Initializable{
         }
     }   
 
+    public void ButtonMyAccount(ActionEvent event) throws Exception{
+        if (Model.Person.userConnected != null){
+           try {
+            Stage stage1 = (Stage) logreg.getScene().getWindow();
+            stage1.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/myAccount.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+            }catch(Exception e) {
+                e.printStackTrace();
+          }
+        }else{
+                userStatus.setText("Not connected !");
+            }
+    }
+
+
     //MAIN
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    }   
+    }  
 }
+
+ 

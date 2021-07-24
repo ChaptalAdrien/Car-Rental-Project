@@ -119,9 +119,19 @@ public class LogRegController implements Initializable {
         
         Customer c = new Customer();
         c.login(email, password);
-            
-         
+        try {
+        Stage stage1 = (Stage) backToMainButton.getScene().getWindow();
+        stage1.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
         }
+         
+    }
         
             
     
@@ -141,8 +151,8 @@ public class LogRegController implements Initializable {
         }
     }
     public void ButtonChangePwd(ActionEvent event) throws Exception{
-        firstName.setText(Person.userConnected.getfirstName());
-        String newPswd = Security.hashSaltPswd(this.newPassword.getText());
+        //firstName.setText(Model.Person.userConnected.getFirstName());
+        //String newPswd = Security.hashSaltPswd(this.newPassword.getText());
         
     }
 

@@ -17,7 +17,6 @@
       <TextField fx:id="lastName" layoutX="466.0" layoutY="270.0" />
       <TextField fx:id="adress" layoutX="466.0" layoutY="317.0" />
       <TextField fx:id="phoneNumber" layoutX="466.0" layoutY="360.0" />
-      <TextField fx:id="birthDate" layoutX="466.0" layoutY="403.0" />
       <Button layoutX="211.0" layoutY="681.0" mnemonicParsing="false" text="Back" />
       <Text layoutX="466.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name :" wrappingWidth="90.13671875" />
       <Text layoutX="466.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name :" wrappingWidth="90.13671875" />

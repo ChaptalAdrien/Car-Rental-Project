@@ -6,6 +6,7 @@
 package Controler;
 
 import Model.Customer;
+import Conf.Security;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -77,16 +78,15 @@ public class LogRegController implements Initializable {
 
     //Event
     @FXML
-    private void register(ActionEvent event) {
+    private void register(ActionEvent event) throws Exception {
         
-        int id = (int) (Math.random() * ( 100000000 - 0 ));
         String fn = this.firstName.getText();
         String ln = this.lastName.getText();
         String adr = this.adress.getText();
         String pn = this.phoneNumber.getText();
         LocalDate bd = this.birthDate.getValue();
         String em = this.email.getText();
-        String pswd = this.password.getText();
+        String pswd = Security.hashSaltPswd(this.password.getText());
         boolean m = true;
         boolean ct = false;
         
@@ -94,9 +94,17 @@ public class LogRegController implements Initializable {
         
         c.register();
         
-        label.setText("Register Failed");
+        //label.setText("Register Failed");
     }
-
+    
+    @FXML
+    public void login(ActionEvent event) throws Exception {             
+        
+        String email = this.logIn.getText();
+        String password = Security.hashSaltPswd(this.password.getText());
+            
+    }
+    
     //Action button Back
     @FXML
     public void ButtonBack(ActionEvent event) throws Exception {             
@@ -113,41 +121,7 @@ public class LogRegController implements Initializable {
         }
     }
     
-    /*
-    public String hashSaltPswd(String password){
-        
 
-        MessageDigest md;
-        try
-        {
-            // Select the message digest for the hash computation -> SHA-256
-            md = MessageDigest.getInstance("SHA-256");
-
-            // Generate the random salt
-            SecureRandom random = new SecureRandom();
-            byte[] salt = new byte[16];
-            random.nextBytes(salt);
-
-            // Passing the salt to the digest for the computation
-            md.update(salt);
-
-            // Generate the salted hash
-            byte[] hashedPassword = md.digest(password.getBytes(StandardCharsets.UTF_8));
-
-            StringBuilder sb = new StringBuilder();
-            for (byte b : hashedPassword)
-                sb.append(String.format("%02x", b));
-            
-            String hashedSaltpswd= (String) sb;
-            
-            return hashedSaltpswd;
-        } catch (NoSuchAlgorithmException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-    */
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

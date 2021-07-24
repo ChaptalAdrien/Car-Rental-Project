@@ -6,6 +6,8 @@ import java.security.NoSuchAlgorithmException;
 
 public class Security {
     
+    //Static Salt for hashing password 
+    //BE CAREFUL : IF YOUR MODIFY IT, YOU WILL NOT BE ABLE TO VERIFY PREVIOUS PASSWORDS
     private static final String SALT = "SFt1QyYB9pdoxH6m53cX";
     
     

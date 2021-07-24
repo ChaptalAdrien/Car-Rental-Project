@@ -90,7 +90,7 @@ public class LogRegController implements Initializable {
         boolean m = true;
         boolean ct = false;
         
-        Customer c = new Customer(id,fn,ln, pn, adr,bd,m, ct, pswd, em);
+        Customer c = new Customer(em,fn,ln, pn, adr,bd,m, ct, pswd);
         
         c.register();
         

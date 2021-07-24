@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -23,7 +22,22 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.DatePicker;
+import java.io.IOException;
+import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.application.Application;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import java.io.IOException;
 
 /**
  *
@@ -81,6 +95,14 @@ public class LogRegController implements Initializable {
         c.register();
         
         label.setText("Register Failed");
+    }
+
+    //Action button Back
+    @FXML
+    public void ButtonBack(ActionEvent event) throws Exception {             
+        Stage stage = (Stage) backToMainButton.getScene().getWindow();
+         // do what you have to do
+        stage.close();
     }
     
     /*

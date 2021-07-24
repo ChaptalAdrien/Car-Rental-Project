@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.application.Platform;
 
 
 /**
@@ -19,14 +20,17 @@ public class Main extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/View/registerPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/startPage.fxml"));
         
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
-    }
+        //stage.setOnCloseRequest(e -> Platform.exit());
 
+    }
+    
     /**
      * @param args the command line arguments
      */

@@ -19,5 +19,6 @@
             <Font name="Agency FB" size="12.0" />
          </font>
       </Button>
+      <Button fx:id="back" layoutX="210.0" layoutY="681.0" mnemonicParsing="false" onAction="#ButtonBack" text="Back" />
    </children>
 </AnchorPane>

@@ -23,11 +23,6 @@
             <Font name="Agency FB" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="next" layoutX="835.0" layoutY="678.0" mnemonicParsing="false" onAction="#ButtonNext" prefHeight="25.0" prefWidth="54.0" text="Next">
-         <font>
-            <Font name="Agency FB" size="15.0" />
-         </font>
-      </Button>
       <AnchorPane layoutX="277.0" layoutY="26.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
          <children>
             <ImageView fitHeight="106.0" fitWidth="200.0" layoutX="14.0" layoutY="20.0">

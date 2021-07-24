@@ -13,17 +13,17 @@
             <Image url="@mainBackground.png" />
          </image>
       </ImageView>
-      <Button fx:id="pro" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="181.0" text="Pro">
+      <Button fx:id="pro" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#ButtonPro" prefHeight="28.0" prefWidth="181.0" text="Pro">
          <font>
             <Font name="Agency FB" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="logreg" layoutX="916.0" layoutY="12.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="156.0" text="Login/Register">
+      <Button fx:id="logreg" layoutX="916.0" layoutY="12.0" mnemonicParsing="false" onAction="#ButtonLoginReg" prefHeight="28.0" prefWidth="156.0" text="Login/Register">
          <font>
             <Font name="Agency FB" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="next" layoutX="835.0" layoutY="678.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" text="Next">
+      <Button fx:id="next" layoutX="835.0" layoutY="678.0" mnemonicParsing="false" onAction="#ButtonNext" prefHeight="25.0" prefWidth="54.0" text="Next">
          <font>
             <Font name="Agency FB" size="15.0" />
          </font>
@@ -36,7 +36,7 @@
                </image>
             </ImageView>
             <Text layoutX="211.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DACIA SANDERO" wrappingWidth="106.298828125" />
-            <Button layoutX="432.0" layoutY="61.0" mnemonicParsing="false" text="Select" />
+            <Button layoutX="432.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS1" text="Select" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="276.0" layoutY="185.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
@@ -47,7 +47,7 @@
                </image>
             </ImageView>
             <Text layoutX="217.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PEUGEOT 208" wrappingWidth="147.671875" />
-            <Button layoutX="433.0" layoutY="61.0" mnemonicParsing="false" text="Select" />
+            <Button layoutX="433.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS2" text="Select" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="276.0" layoutY="342.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
@@ -58,7 +58,7 @@
                </image>
             </ImageView>
             <Text layoutX="217.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MERCEDES 4x4" wrappingWidth="106.298828125" />
-            <Button layoutX="433.0" layoutY="61.0" mnemonicParsing="false" text="Select" />
+            <Button layoutX="433.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS3" text="Select" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="277.0" layoutY="509.0" prefHeight="146.0" prefWidth="529.0" style="-fx-background-color: #fff7e0;">
@@ -69,7 +69,7 @@
                </image>
             </ImageView>
             <Text layoutX="220.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROLLS ROYCE GHOST" />
-            <Button layoutX="430.0" layoutY="61.0" mnemonicParsing="false" text="Select" />
+            <Button layoutX="430.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonS4" text="Select" />
          </children>
       </AnchorPane>
    </children>

@@ -100,9 +100,24 @@ public class Customer extends Person {
                 Person.setUserConnected(this);
             
         }
-
         
+
     }
-       
-    
+
+    public static String getTableName() {
+        return tableName;
+    }
+
+    public static String getPrimary_key() {
+        return primary_key;
+    }
+
+    public boolean isMember() {
+        return member;
+    }
+
+    public boolean isCustomerType() {
+        return customerType;
+    }
+ 
 }

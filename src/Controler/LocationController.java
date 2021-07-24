@@ -85,7 +85,7 @@ public class LocationController implements Initializable{
            e.printStackTrace();
           }
     }
-    //Actions Pro
+    //Actions Next
     @FXML
     public void ButtonNext(ActionEvent event) throws Exception {             
         try {

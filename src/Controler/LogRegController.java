@@ -79,7 +79,6 @@ public class LogRegController implements Initializable {
     @FXML
     private void register(ActionEvent event) {
         
-        int id = (int) (Math.random() * ( 100000000 - 0 ));
         String fn = this.firstName.getText();
         String ln = this.lastName.getText();
         String adr = this.adress.getText();

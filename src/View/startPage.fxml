@@ -18,12 +18,12 @@
             <Font name="Agency FB" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="logreg" layoutX="841.0" layoutY="13.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="225.0" text="Login/Register">
+      <Button fx:id="logreg" layoutX="841.0" layoutY="13.0" mnemonicParsing="false" onAction="#ButtonLoginReg" prefHeight="28.0" prefWidth="225.0" text="Login/Register">
          <font>
             <Font name="Agency FB" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="pro" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="231.0" text="Pro">
+      <Button fx:id="pro" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonPro" prefHeight="25.0" prefWidth="231.0" text="Pro">
          <font>
             <Font name="Agency FB" size="12.0" />
          </font>

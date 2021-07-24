@@ -7,6 +7,8 @@ import java.time.LocalDate;
 
 public abstract class Person extends Model {
     
+    private static Person userConnected = null;
+    
     protected String firstName;
     protected String lastName;
     protected String adress;
@@ -15,5 +17,8 @@ public abstract class Person extends Model {
     protected String password;
     protected String email;
     
+    public static void setUserConnected(Person user){
+        Person.userConnected = user;
+    }
    
 }

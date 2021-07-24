@@ -66,13 +66,11 @@ public abstract class Model extends Conf {
         
         //init database connexion
         this.init();
-        
-        
+
         String request = "INSERT INTO " + table + " VALUES (";
         
-        //Putting all values into a string 
+        //Creation of the prepared update
  
-        
         for(int i=0; i < data.size(); i++){
             if(i == data.size() - 1){
  
@@ -84,9 +82,8 @@ public abstract class Model extends Conf {
             
         }
         
+        //filling with the values and execute update
         try {
-            
-            
 
             PreparedStatement preparedStatement = conn.prepareStatement(request);
 

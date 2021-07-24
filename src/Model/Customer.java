@@ -57,9 +57,11 @@ public class Customer extends Person {
         data.add(ct);
         data.add(this.password);
         
-        
-        this.Save(data, Customer.tableName);
-        
+        try{
+            this.Save(data, Customer.tableName);
+        }catch(Exception e){
+             //throw new exception();    
+        }
     }
     
     //Search user based on email (id) then verify if the password is the same if the user exist
@@ -98,8 +100,6 @@ public class Customer extends Person {
                 Person.setUserConnected(this);
             
         }
-        
-        
         
         
     }

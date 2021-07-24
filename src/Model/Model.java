@@ -41,6 +41,33 @@ public abstract class Model extends Conf {
             }
     }
     
+    
+    public void update(String object, String column, String primaryKey, String pkValue, String newValue){
+        //init databese connection 
+        this.init();
+        
+        try {
+
+            String request = "update " + object + " set " + column + " = ? where " + primaryKey + " = ?";
+
+            PreparedStatement preparedStatement = conn.prepareStatement(request);
+            preparedStatement.setString(1, newValue);
+            preparedStatement.setString(2, pkValue);
+            preparedStatement.executeUpdate();
+            
+ 
+        } catch (SQLException ex) {
+            Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        //close database connexion
+        this.close();
+        
+ 
+        
+    }
+    
+    
     public ResultSet select(String object, String primary_key, String value){
          
         //initdatabaseConnection

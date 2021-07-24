@@ -20,5 +20,9 @@ public abstract class Person extends Model {
     public static void setUserConnected(Person user){
         Person.userConnected = user;
     }
+    
+    public String getPsswd(){
+        return this.password;
+    }
    
 }

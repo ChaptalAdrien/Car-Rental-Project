@@ -41,8 +41,38 @@ public abstract class Model extends Conf {
             }
     }
     
+    public ResultSet select(String object, String primary_key, String value){
+         
+        //initdatabaseConnection
+        this.init();
+        
+        try {
+
+            String request = "select * from " + object + " where " + primary_key + " = ?";
+
+            PreparedStatement preparedStatement = conn.prepareStatement(request);
+            preparedStatement.setString(1, value);
+            
+            ResultSet rs = preparedStatement.executeQuery();
+            
+            return rs;
+ 
+        } catch (SQLException ex) {
+            Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        //close database connexion
+        this.close();
+        
+        return null;
+        
+    }
+    
     //Select all rows of a designated Table
     public ResultSet selectAll(String object){
+        
+        //initdatabaseConnection
+        this.init();
         
         ResultSet rs = null;
         
@@ -58,6 +88,10 @@ public abstract class Model extends Conf {
         } catch (SQLException ex) {
             Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        //close database connexion
+        this.close();
+        
         return rs;
     }
     
@@ -90,6 +124,8 @@ public abstract class Model extends Conf {
             for(int i=0; i < data.size(); i++){
                 if(data.get(i) instanceof String){
                     preparedStatement.setString(i + 1, (String) data.get(i));
+                }else if(data.get(i) instanceof Double){
+                    preparedStatement.setDouble(i+1, (double) data.get(i));
                 }else{
                     preparedStatement.setInt(i+1, (int) data.get(i));
                 }

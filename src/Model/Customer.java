@@ -1,21 +1,29 @@
 
 package Model;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import javax.security.auth.login.FailedLoginException;
 
 
 
 public class Customer extends Person {
     
     private static String tableName = "customers";
+    private static String primary_key = "email";
     
     private boolean member;
     private boolean customerType; //0 is particular, 1 is business
-    private String Password; // Always hash + seed 
 
-    public Customer(String email, String firstName, String lastName, String phoneNumber, String adress, LocalDate birthDate, boolean member, boolean customerType, String Password) {
+    
+    public Customer(){
+        
+    }
+    
+    public Customer(String email, String firstName, String lastName, String phoneNumber, String adress, LocalDate birthDate, boolean member, boolean customerType, String password) {
         
 
         this.firstName = firstName;
@@ -25,15 +33,16 @@ public class Customer extends Person {
         this.birthDate = birthDate;
         this.member = member;
         this.customerType = customerType;
-        this.Password = Password; // Always hash + seed 
+        this.password = password; // Always hash + seed 
         this.email = email;
+
     
     }
     
 
     
     //Save the custommer data into an arraylist, then save it into the database
-    public void register(){
+    public void register() throws SQLException{
         
         ArrayList data = new ArrayList();
         data.add(this.email);
@@ -46,11 +55,54 @@ public class Customer extends Person {
         data.add(m);
         int ct = this.customerType ? 1 : 0;
         data.add(ct);
-        data.add(this.Password);
-
+        data.add(this.password);
+        
         
         this.Save(data, Customer.tableName);
         
     }
+    
+    //Search user based on email (id) then verify if the password is the same if the user exist
+    public void login(String email, String psswd) throws SQLException, FailedLoginException{
+        ResultSet rs = this.select(Customer.tableName, Customer.primary_key, email);
+        
+        if(rs != null){
+            while(rs.next()){
+                this.email = email;
+                this.firstName = rs.getString("firstName");
+                this.lastName = rs.getString("lastName");
+                this.phoneNumber = rs.getString("phoneNumber");
+                this.adress = rs.getString("adress");
+                
+                //formating the String date to LocalDate
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                String date = rs.getString("birthDate");
+                this.birthDate = LocalDate.parse(date, formatter);
+                 
+                this.member = (boolean) rs.getObject("member");
+                this.customerType = (boolean) rs.getObject("customerType");
+                this.password = rs.getString("password");
+                
+                
+            }
+        }else{
+            throw new FailedLoginException("no user with that email");
+        }
+        
+        //comparing passwords 
+        if(!this.password.equals(psswd)){
+            throw new FailedLoginException("Wrong password");
+        }else{
+            //If the passwords are the same, we set attributes with the db data then put set up connected user
+                //setting the curent custommer to the connected user
+                Person.setUserConnected(this);
+            
+        }
+        
+        
+        
+        
+    }
+       
     
 }

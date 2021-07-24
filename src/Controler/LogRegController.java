@@ -7,6 +7,7 @@ package Controler;
 
 import Model.Customer;
 import Conf.Security;
+import Model.Person;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -100,10 +101,16 @@ public class LogRegController implements Initializable {
     @FXML
     public void login(ActionEvent event) throws Exception {             
         
-        String email = this.logIn.getText();
+        String email = this.login.getText();
         String password = Security.hashSaltPswd(this.password.getText());
+        
+        Customer c = new Customer();
+        c.login(email, password);
             
-    }
+         
+        }
+        
+            
     
     //Action button Back
     @FXML

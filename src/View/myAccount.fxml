@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.LogRegController">
    <children>
-      <SplitPane dividerPositions="0.31270903010033446" layoutX="1.0" layoutY="66.0" prefHeight="334.0" prefWidth="600.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="188.0">
-               <children>
-                  <Text layoutX="21.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
-                  <Text layoutX="22.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
-                  <Text layoutX="20.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
-                  <Text layoutX="21.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
-                  <Text layoutX="21.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-                  <TextField fx:id="firstName" layoutX="20.0" layoutY="43.0" />
-                  <TextField layoutX="20.0" layoutY="98.0" />
-                  <TextField layoutX="20.0" layoutY="154.0" />
-                  <TextField layoutX="20.0" layoutY="205.0" />
-                  <TextField layoutX="20.0" layoutY="259.0" />
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-      <Button fx:id="bookCars" mnemonicParsing="false" prefHeight="66.0" prefWidth="124.0" text="Book a car" />
-      <Text layoutX="522.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Account" />
+      <ImageView fitHeight="720.0" fitWidth="1080.0">
+         <image>
+            <Image url="@mainBackground.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="firstName" layoutX="466.0" layoutY="224.0" />
+      <TextField fx:id="lastName" layoutX="466.0" layoutY="270.0" />
+      <TextField fx:id="adress" layoutX="466.0" layoutY="317.0" />
+      <TextField fx:id="phoneNumber" layoutX="466.0" layoutY="360.0" />
+      <TextField fx:id="birthDate" layoutX="466.0" layoutY="403.0" />
+      <Button layoutX="211.0" layoutY="681.0" mnemonicParsing="false" text="Back" />
+      <Text layoutX="466.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name :" wrappingWidth="90.13671875" />
+      <Text layoutX="466.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name :" wrappingWidth="90.13671875" />
+      <Text layoutX="466.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress" wrappingWidth="90.13671875" />
+      <Text layoutX="466.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" wrappingWidth="90.13671875" />
+      <Text layoutX="466.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" wrappingWidth="90.13671875" />
+      <Text layoutX="466.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change password : " wrappingWidth="132.13671875" />
+      <Button fx:id="change" layoutX="630.0" layoutY="531.0" mnemonicParsing="false" onAction="#ButtonChangePwd" text="Change !" />
+      <Label layoutX="630.0" layoutY="556.0" prefHeight="17.0" prefWidth="64.0" />
+      <Text layoutX="492.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Account">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="password" layoutX="465.0" layoutY="500.0" promptText="Old password" />
+      <PasswordField layoutX="465.0" layoutY="531.0" promptText="New password" />
    </children>
 </AnchorPane>

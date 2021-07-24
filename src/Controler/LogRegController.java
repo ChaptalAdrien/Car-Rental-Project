@@ -140,7 +140,10 @@ public class LogRegController implements Initializable {
            e.printStackTrace();
         }
     }
-    
+    public void ButtonChangePwd(ActionEvent event) throws Exception {             
+        String pswd = Security.hashSaltPswd(this.password.getText());
+    }
+    public void 
 
 
     @Override

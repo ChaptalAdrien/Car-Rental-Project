@@ -195,7 +195,7 @@ public class LocationController implements Initializable{
         //String cnum = cardNumber.getText();
         //LocalDate expdate = expDate.getValue();
         //String code = CCV.getText();
-        if ((nameOnCard.getText() == null || nameOnCard.getText().trim().isEmpty()) || (cardNumber.getText() == null || cardNumber.getText().trim().isEmpty()) || (ccv.getText() == null || ccv.getText().trim().isEmpty())){
+        if ((nameOnCard.getText() == null || nameOnCard.getText().trim().isEmpty()) || (cardNumber.getText() == null || cardNumber.getText().trim().isEmpty()) || (ccv.getText() == null || ccv.getText().trim().isEmpty()) ){
             PayementStatus.setText("Wrong");
         }else{
             PayementStatus.setText("ALL GOOD !");

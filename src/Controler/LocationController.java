@@ -91,22 +91,6 @@ public class LocationController implements Initializable{
            e.printStackTrace();
           }
     }
-    //Actions Next
-    @FXML
-    public void ButtonNext(ActionEvent event) throws Exception {             
-        try {
-        Stage stage1 = (Stage) logreg.getScene().getWindow();
-        stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-    }
-
     //Cars selection
     @FXML
     public void ButtonS1(ActionEvent event) throws Exception {             

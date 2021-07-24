@@ -37,6 +37,8 @@ public class MainController implements Initializable{
     private Button register;
     @FXML
     private Button login;
+    @FXML
+    private Button backToMainButton;
 
     //Actions Login
     @FXML
@@ -60,6 +62,20 @@ public class MainController implements Initializable{
         Stage stage1 = (Stage) register.getScene().getWindow();
         stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/registerPage.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+    }
+       @FXML
+    public void ButtonBack(ActionEvent event) throws Exception {             
+        try {
+        Stage stage1 = (Stage) register.getScene().getWindow();
+        stage1.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/startPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  

@@ -38,6 +38,8 @@ public class LocationController implements Initializable{
     private Button pro;
     @FXML
     private Button next;
+    @FXML 
+    private Label emailDisplay;
 
     //TextField
     //Combo Box

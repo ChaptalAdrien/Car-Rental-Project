@@ -30,7 +30,7 @@
                   <Font name="Agency FB" size="23.0" />
                </font>
             </TextField>
-            <Button fx:id="backToMainButton" layoutX="14.0" layoutY="616.0" mnemonicParsing="false" text="Back">
+            <Button fx:id="backToMainButton" layoutX="14.0" layoutY="616.0" mnemonicParsing="false" onAction="#ButtonBack" text="Back">
                <font>
                   <Font name="Agency FB" size="17.0" />
                </font>

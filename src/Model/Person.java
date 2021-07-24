@@ -20,9 +20,38 @@ public abstract class Person extends Model {
     public static void setUserConnected(Person user){
         Person.userConnected = user;
     }
-    
-    public String getPsswd(){
-        return this.password;
+
+    public static Person getUserConnected() {
+        return userConnected;
     }
-   
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    
+
 }

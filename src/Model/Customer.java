@@ -101,8 +101,23 @@ public class Customer extends Person {
             
         }
         
-        
+
     }
-       
-    
+
+    public static String getTableName() {
+        return tableName;
+    }
+
+    public static String getPrimary_key() {
+        return primary_key;
+    }
+
+    public boolean isMember() {
+        return member;
+    }
+
+    public boolean isCustomerType() {
+        return customerType;
+    }
+ 
 }

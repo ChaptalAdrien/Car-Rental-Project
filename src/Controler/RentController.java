@@ -173,7 +173,7 @@ public class RentController implements Initializable{
     @FXML
     public void ButtonS2(ActionEvent event) throws Exception {  
         
-        Car car = new Car("1", "Peugeot 208", "Compacte");
+        Car car = new Car("1", "Peugeot 308", "Compacte");
         Customer customer;
         String idRent = UUID.randomUUID().toString();
         

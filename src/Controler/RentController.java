@@ -345,17 +345,15 @@ public class RentController implements Initializable{
         LocalDate rentDate = rentalDate.getValue();
         LocalDate retDate = returnDate.getValue();
         long noOfDaysBetween = ChronoUnit.DAYS.between(rentDate, retDate);
-        double tprice = (noOfDaysBetween*dailyPrice);
-        String str = String.valueOf(tprice);
-        totalPrice.setText(str);
+        if (noOfDaysBetween > 0){
+            double tprice = (noOfDaysBetween*dailyPrice);
+            String str = String.valueOf(tprice);
+            totalPrice.setText(str);
+        }else{
+            System.out.println("Please select valide date");
+        }
+        
     }
-//    public int nbDays(LocalDate rentalDate, LocalDate returnDate){
-////        Days d = Days.daysBetween(rentalDate, returnDate);
-////        int days = d.getDays();
-////        System.out.println(days);
-//          int days = Days.daysBetween(rentalDate, returnDate).getDays();
-//          System.out.prinln(days);
-//    }
     //MAIN
     @Override
     public void initialize(URL url, ResourceBundle rb) {

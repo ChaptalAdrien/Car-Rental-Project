@@ -16,13 +16,13 @@ public class History {
     private String type;
     private String rentDate;
     private String endDate;
-    private String price;
+    private double price;
     
-    public History(String car, String type, String rentDate, String endDate, String price){
+    public History(String car, String type, String rentDate, String endDate, double price){
         this.car = car;
-        this.car = type;
-        this.car = rentDate;
-        this.car = endDate;
-        this.car = price;
+        this.type = type;
+        this.rentDate = rentDate;
+        this.endDate = endDate;
+        this.price = price;
     }
 }

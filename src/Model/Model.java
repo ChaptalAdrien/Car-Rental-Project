@@ -169,7 +169,7 @@ public abstract class Model extends Conf {
         
     }
     
-        public ResultSet GetHistory(String email){
+        public ArrayList<History> GetHistory(String email) throws SQLException{
             
             //initdatabaseConnection
         this.init();
@@ -192,7 +192,19 @@ public abstract class Model extends Conf {
         //close database connexion
         this.close();
         
-        return rs;
+       //Object to store into collection
+        History h = null;
+        ArrayList<History> data = new ArrayList();
+        
+        while(rs.next()){
+            //initialazing h
+            h = new History(rs.getString("model"), rs.getString("type"), rs.getString("rentalDate"), rs.getString("retournDate"), rs.getDouble("price"));
+            
+            data.add(h);
+        }
+        
+        
+        return data;
             
         }
     

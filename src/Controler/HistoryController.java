@@ -27,10 +27,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-/**
- *
- * @author rouss
- */
+
 public class HistoryController implements Initializable{
     @FXML
     private TableView historyTable;

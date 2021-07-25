@@ -50,6 +50,8 @@ public class LogRegController implements Initializable {
     //Display
     @FXML
     private Label label;
+    @FXML
+    private Button displayMyData;
 
     //Register
     @FXML
@@ -68,6 +70,8 @@ public class LogRegController implements Initializable {
     private PasswordField password;
     @FXML
     private Button backToMainButton;
+    @FXML
+    private Button back;
     @FXML
     private Button loginButton;
 
@@ -139,9 +143,9 @@ public class LogRegController implements Initializable {
     @FXML
     public void ButtonBack(ActionEvent event) throws Exception {             
         try {
-        Stage stage1 = (Stage) backToMainButton.getScene().getWindow();
+        Stage stage1 = (Stage) back.getScene().getWindow();
         stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  
@@ -151,9 +155,14 @@ public class LogRegController implements Initializable {
         }
     }
     public void ButtonChangePwd(ActionEvent event) throws Exception{
-        //firstName.setText(Model.Person.userConnected.getFirstName());
-        //String newPswd = Security.hashSaltPswd(this.newPassword.getText());
-        
+         
+    }
+    public void ButtonDisplayData(ActionEvent event) throws Exception{
+        firstName.setText(Model.Person.userConnected.getFirstName());
+        lastName.setText(Model.Person.userConnected.getLastName());
+        adress.setText(Model.Person.userConnected.getAdress());
+        phoneNumber.setText(Model.Person.userConnected.getPhoneNumber());
+        birthDate.setValue(Model.Person.userConnected.getBirthDate());
     }
 
 

@@ -200,7 +200,7 @@ public class LocationController implements Initializable{
         //String cnum = cardNumber.getText();
         //LocalDate expdate = expDate.getValue();
         //String code = CCV.getText();
-        if ((nameOnCard.getText() == null || nameOnCard.getText().trim().isEmpty()) || (cardNumber.getText() == null || cardNumber.getText().trim().isEmpty()) || (ccv.getText() == null || ccv.getText().trim().isEmpty()) ){
+        if ((nameOnCard.getText() == null || nameOnCard.getText().trim().isEmpty()) || (cardNumber.getText() == null || cardNumber.getText().trim().isEmpty()) || (ccv.getText() == null || ccv.getText().trim().isEmpty()) || (expDate.getValue() == null)){
             PayementStatus.setText("Wrong");
         }else{
             PayementStatus.setText("ALL GOOD !");
@@ -219,7 +219,7 @@ public class LocationController implements Initializable{
                 stage.show();
             }catch(Exception e) {
                 e.printStackTrace();
-          }
+          } 
         }else{
                 userStatus.setText("Not connected !");
             }

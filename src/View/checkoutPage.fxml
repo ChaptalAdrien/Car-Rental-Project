@@ -15,12 +15,11 @@
       </ImageView>
       <TextField fx:id="nameOnCard" layoutX="407.0" layoutY="193.0" prefHeight="25.0" prefWidth="267.0" promptText="Name on the card" />
       <TextField fx:id="cardNumber" layoutX="407.0" layoutY="225.0" prefHeight="25.0" prefWidth="267.0" promptText="Card number" />
-      <DatePicker layoutX="407.0" layoutY="259.0" promptText="Expiration date" />
-      <TextField layoutX="590.0" layoutY="259.0" prefHeight="25.0" prefWidth="83.0" promptText="CCV" />
+      <DatePicker fx:id="expDate" layoutX="407.0" layoutY="259.0" promptText="Expiration date" />
+      <TextField fx:id="ccv" layoutX="590.0" layoutY="259.0" prefHeight="25.0" prefWidth="83.0" promptText="CCV" />
       <Button layoutX="457.0" layoutY="301.0" mnemonicParsing="false" onAction="#ProceedGuest" text="Proceed payment as a Guest" />
       <Button fx:id="back" layoutX="210.0" layoutY="681.0" mnemonicParsing="false" onAction="#Back" text="Back" />
       <Button fx:id="logreg" layoutX="907.0" layoutY="14.0" mnemonicParsing="false" onAction="#ButtonLoginReg" prefHeight="25.0" prefWidth="167.0" text="Login/Register" />
-      <Label fx:id="prompt" layoutX="370.0" layoutY="39.0" prefHeight="110.0" prefWidth="340.0" text="Test" />
-      <Label fx:id="PayementStatus" layoutX="494.0" layoutY="368.0" prefHeight="17.0" prefWidth="93.0" />
+      <Label fx:id="PayementStatus" layoutX="494.0" layoutY="334.0" prefHeight="17.0" prefWidth="93.0" />
    </children>
 </AnchorPane>

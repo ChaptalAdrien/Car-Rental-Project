@@ -69,6 +69,8 @@ public class LogRegController implements Initializable {
     @FXML
     private PasswordField password;
     @FXML
+    private PasswordField newPassword;
+    @FXML
     private Button backToMainButton;
     @FXML
     private Button back;
@@ -80,6 +82,8 @@ public class LogRegController implements Initializable {
     private TextField login;
     @FXML
     private Button logIn;
+    @FXML
+    private Label pwdStatus;
 
     //Event
     @FXML
@@ -155,6 +159,13 @@ public class LogRegController implements Initializable {
         }
     }
     public void ButtonChangePwd(ActionEvent event) throws Exception{
+        try{
+         String nPassword = Security.hashSaltPswd(this.newPassword.getText());
+         Model.Person.userConnected.update(Customer.tableName, "password", Customer.primary_key, Model.Person.userConnected.getEmail(), nPassword);
+         pwdStatus.setText("Password changed");
+        } catch(Exception e){
+         pwdStatus.setText("Something happened");
+        }
          
     }
     public void ButtonDisplayData(ActionEvent event) throws Exception{

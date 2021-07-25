@@ -34,5 +34,6 @@
       <PasswordField fx:id="newPassword" layoutX="465.0" layoutY="531.0" promptText="New password" />
       <Button fx:id="displayMyData" layoutX="910.0" layoutY="13.0" mnemonicParsing="false" onAction="#ButtonDisplayData" text="Display my personnal data" />
       <DatePicker fx:id="birthDate" layoutX="465.0" layoutY="402.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="pwdStatus" layoutX="465.0" layoutY="556.0" prefHeight="17.0" prefWidth="149.0" />
    </children>
 </AnchorPane>

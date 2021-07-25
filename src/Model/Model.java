@@ -153,7 +153,7 @@ public abstract class Model extends Conf {
                     preparedStatement.setString(i + 1, (String) data.get(i));
                 }else if(data.get(i) instanceof Double){
                     preparedStatement.setDouble(i+1, (double) data.get(i));
-                }else{
+                }else if(data.get(i) instanceof Integer){
                     preparedStatement.setInt(i+1, (int) data.get(i));
                 }
             }

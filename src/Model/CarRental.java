@@ -2,6 +2,7 @@
 package Model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 
@@ -64,8 +65,16 @@ public class CarRental extends Model{
         return returnDate;
     }
 
+    public Double getPrice() {
+        return price;
+    }
 
     //SETTERS
+    
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
 
     public void setCustommer(Customer custommer) {
         this.custommer = custommer;
@@ -104,8 +113,8 @@ public class CarRental extends Model{
         data.add(this.discount.getIdDiscount());
         data.add(this.custommer.getEmail());
         
-        data.add(this.rentalDate);
-        data.add(this.returnDate);
+        data.add(this.rentalDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        data.add(this.returnDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
         data.add(this.price);
         
         this.save(data, CarRental.tableName);

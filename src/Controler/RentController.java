@@ -298,7 +298,9 @@ public class RentController implements Initializable{
             CarRental.onGoingRent.setReturnDate(returnDate.getValue());
             Discount discount = new Discount("0");
             CarRental.onGoingRent.setDiscount(discount);
+            CarRental.onGoingRent.setPrice(Double.parseDouble(totalPrice.getText()));
             CarRental.onGoingRent.saveBooking();
+
             
             try{
                 CarRental.onGoingRent.saveBooking();

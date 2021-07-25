@@ -212,11 +212,6 @@ public class LogRegController implements Initializable {
     }     
 
     public void ButtonDisplayData(ActionEvent event) throws Exception{
-        firstName.setPromptText(Model.Person.userConnected.getFirstName());
-        lastName.setPromptText(Model.Person.userConnected.getLastName());
-        adress.setPromptText(Model.Person.userConnected.getAdress());
-        phoneNumber.setPromptText(Model.Person.userConnected.getPhoneNumber());
-        birthDate.setValue(Model.Person.userConnected.getBirthDate());
     }
 
     public void ButtonHistory(ActionEvent event) throws Exception{
@@ -237,6 +232,11 @@ public class LogRegController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        firstName.setPromptText(Model.Person.userConnected.getFirstName());
+        lastName.setPromptText(Model.Person.userConnected.getLastName());
+        adress.setPromptText(Model.Person.userConnected.getAdress());
+        phoneNumber.setPromptText(Model.Person.userConnected.getPhoneNumber());
+        birthDate.setValue(Model.Person.userConnected.getBirthDate());
     }    
     
 }

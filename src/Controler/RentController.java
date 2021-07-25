@@ -31,6 +31,8 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import Model.Person.*;
 import java.util.UUID;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 
 
@@ -273,6 +275,7 @@ public class RentController implements Initializable{
            e.printStackTrace();
           }
     }
+    @FXML
     public void ProceedGuest(ActionEvent event) throws Exception {
         //String name = nameOnCard.getText();
         //String cnum = cardNumber.getText();
@@ -284,7 +287,7 @@ public class RentController implements Initializable{
             PayementStatus.setText("ALL GOOD !");
         }
     }   
-
+    @FXML
     public void ButtonMyAccount(ActionEvent event) throws Exception{
         if (Model.Person.userConnected != null){
            try {
@@ -302,14 +305,33 @@ public class RentController implements Initializable{
                 userStatus.setText("Not connected !");
             }
     }
+    @FXML
     public void DateFrom(ActionEvent event) throws Exception{
+        returnDate.setVisible(true);
     }
-
-
+    @FXML
+    public void DateTo(ActionEvent event) throws Exception{
+        //Get the Daily Price
+        Double dailyPrice = CarRental.onGoingRent.getCar().getDailyPrice();
+        //Get the date and then parse them
+        LocalDate rentDate = rentalDate.getValue();
+        LocalDate retDate = returnDate.getValue();
+        long noOfDaysBetween = ChronoUnit.DAYS.between(rentDate, retDate);
+        double tprice = (noOfDaysBetween*dailyPrice);
+        String str = String.valueOf(tprice);
+        totalPrice.setText(str);
+    }
+//    public int nbDays(LocalDate rentalDate, LocalDate returnDate){
+////        Days d = Days.daysBetween(rentalDate, returnDate);
+////        int days = d.getDays();
+////        System.out.println(days);
+//          int days = Days.daysBetween(rentalDate, returnDate).getDays();
+//          System.out.prinln(days);
+//    }
     //MAIN
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }  
-}
 
+}
  

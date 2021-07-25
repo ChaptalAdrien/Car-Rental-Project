@@ -112,5 +112,4 @@ public class CarRental extends Model{
         
         
     }
-
 }

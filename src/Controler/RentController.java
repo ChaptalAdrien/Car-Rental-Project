@@ -79,6 +79,12 @@ public class RentController implements Initializable{
     private TextField ccv;
     @FXML
     private Button myAccount;
+    @FXML
+    private DatePicker rentalDate;
+    @FXML
+    private DatePicker returnDate;
+    @FXML
+    private Label totalPrice;
 
 
 
@@ -152,11 +158,12 @@ public class RentController implements Initializable{
         try {
         Stage stage1 = (Stage) logreg.getScene().getWindow();
         stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  
                 stage.show();
+        
         } catch(Exception e) {
            e.printStackTrace();
           }
@@ -181,7 +188,7 @@ public class RentController implements Initializable{
         try {
         Stage stage1 = (Stage) logreg.getScene().getWindow();
         stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  
@@ -210,7 +217,7 @@ public class RentController implements Initializable{
         try {
         Stage stage1 = (Stage) logreg.getScene().getWindow();
         stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  
@@ -239,7 +246,7 @@ public class RentController implements Initializable{
         try {
         Stage stage1 = (Stage) logreg.getScene().getWindow();
         stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkoutPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  

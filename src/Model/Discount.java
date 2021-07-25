@@ -11,6 +11,10 @@ public class Discount {
     private Date validityDate;
     private String Name;
     
+    public Discount(String idDiscount){
+        this.idDiscount = idDiscount;
+    }
+    
     public String getIdDiscount(){
         
         return this.idDiscount;

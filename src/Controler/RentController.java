@@ -10,6 +10,7 @@ package Controler;
 import Model.Car;
 import Model.Customer;
 import Model.CarRental;
+import Model.Discount;
 import Model.Person;
 
 import javafx.stage.Stage;
@@ -290,9 +291,25 @@ public class RentController implements Initializable{
         //LocalDate expdate = expDate.getValue();
         //String code = CCV.getText();
         if ((nameOnCard.getText() == null || nameOnCard.getText().trim().isEmpty()) || (cardNumber.getText() == null || cardNumber.getText().trim().isEmpty()) || (ccv.getText() == null || ccv.getText().trim().isEmpty()) || (expDate.getValue() == null)){
-            PayementStatus.setText("Wrong");
+            PayementStatus.setText("Wrong informations");
         }else{
-            PayementStatus.setText("ALL GOOD !");
+            
+            CarRental.onGoingRent.setRentalDate(rentalDate.getValue());
+            CarRental.onGoingRent.setReturnDate(returnDate.getValue());
+            Discount discount = new Discount("0");
+            CarRental.onGoingRent.setDiscount(discount);
+            CarRental.onGoingRent.saveBooking();
+            
+            try{
+                CarRental.onGoingRent.saveBooking();
+                //The rent is complete go back to null
+                CarRental.onGoingRent = null;
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            
+            //REDIRECTION
+            
         }
     }   
     @FXML

@@ -5,6 +5,8 @@
  */
 
 package Controler;
+import Model.History;
+import Model.Person;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,6 +22,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import java.io.IOException;
+import java.util.ArrayList;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  *
@@ -30,7 +36,22 @@ public class HistoryController implements Initializable{
     private TableView historyTable;
     @FXML 
     private Button back;
-
+    
+    @FXML
+    private TableColumn columnCar;
+    
+    @FXML
+    private TableColumn columnType;
+    
+    @FXML
+    private TableColumn columnRentDate;
+    
+    @FXML
+    private TableColumn ColumnEndDate;
+    
+    @FXML
+    private TableColumn columnPrice;
+    
     @FXML
     public void ButtonBack(ActionEvent event) throws Exception {             
         try {
@@ -46,9 +67,32 @@ public class HistoryController implements Initializable{
            e.printStackTrace();
           }
     }
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    }  
+        
+       try{   
+            ObservableList<History> data = Person.userConnected.GetHistory(Person.userConnected.getEmail());
+            
+            columnCar.setCellValueFactory(new PropertyValueFactory<>("car"));
+            columnType.setCellValueFactory(new PropertyValueFactory<>("type"));
+            columnRentDate.setCellValueFactory(new PropertyValueFactory<>("rentDate"));
+            ColumnEndDate.setCellValueFactory(new PropertyValueFactory<>("endDate"));
+            columnPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+            
+
+ 
+            // Display row data
+            historyTable.setItems(data);
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+        
+        
+ }  
 
     
-}
+

@@ -6,6 +6,9 @@
 
 package Model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 /**
  *
  * @author rouss
@@ -25,4 +28,25 @@ public class History {
         this.endDate = endDate;
         this.price = price;
     }
+
+    public String getCar() {
+        return car;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getRentDate() {
+        return rentDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+    
 }

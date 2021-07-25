@@ -119,7 +119,8 @@ public class LogRegController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false); 
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -144,7 +145,8 @@ public class LogRegController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1)); 
+                stage.setResizable(false); 
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -160,10 +162,11 @@ public class LogRegController implements Initializable {
         try {
         Stage stage1 = (Stage) back.getScene().getWindow();
         stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false); 
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -223,7 +226,8 @@ public class LogRegController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/HistoryPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false); 
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();

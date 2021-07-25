@@ -22,7 +22,7 @@
             <TextField fx:id="email" layoutX="255.0" layoutY="397.0" promptText="Email" />
             <PasswordField fx:id="password" layoutX="255.0" layoutY="436.0" promptText="Password" />
             <Button fx:id="registerButton" layoutX="300.0" layoutY="484.0" mnemonicParsing="false" onAction="#register" text="Register" />
-            <Button fx:id="backToMainButton" layoutX="14.0" layoutY="667.0" mnemonicParsing="false" onAction="#ButtonBack" text="Back" />
+            <Button fx:id="back" layoutX="14.0" layoutY="667.0" mnemonicParsing="false" onAction="#ButtonBack" text="Back" />
             <Label fx:id="label" layoutX="98.0" layoutY="407.0" prefHeight="21.0" prefWidth="157.0" />
          </children>
       </AnchorPane>

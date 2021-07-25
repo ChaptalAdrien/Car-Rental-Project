@@ -91,10 +91,6 @@ public class RentController implements Initializable{
     @FXML
     private Label totalPrice;
 
-    //RESA CONFIRMED PAGE
-    @FXML
-    private Button backCars;
-
 
 
 
@@ -303,7 +299,6 @@ public class RentController implements Initializable{
             Discount discount = new Discount("0");
             CarRental.onGoingRent.setDiscount(discount);
             CarRental.onGoingRent.setPrice(Double.parseDouble(totalPrice.getText()));
-
             
             try{
                 CarRental.onGoingRent.saveBooking();
@@ -314,20 +309,9 @@ public class RentController implements Initializable{
             }
             
             //REDIRECTION
-            try {
-            Stage stage1 = (Stage) back.getScene().getWindow();
-            stage1.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/resaConfirmed.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.setResizable(false);   
-                stage.show();
-            }catch(Exception e) {
-                e.printStackTrace();
+            
         }
-        }
-    }
+    }   
     @FXML
     public void ButtonMyAccount(ActionEvent event) throws Exception{
         if (Model.Person.userConnected != null){
@@ -367,24 +351,6 @@ public class RentController implements Initializable{
             System.out.println("Please select valide date");
         }
         
-    }
-
-
-    //PAGE RESA CONFIRMED
-    @FXML
-    public void ButtonBackCars(ActionEvent event) throws Exception{
-        try {
-        Stage stage1 = (Stage) backCars.getScene().getWindow();
-        stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.setResizable(false);   
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
     }
     //MAIN
     @Override

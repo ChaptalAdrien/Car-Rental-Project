@@ -169,6 +169,33 @@ public abstract class Model extends Conf {
         
     }
     
+        public ResultSet GetHistory(String email){
+            
+            //initdatabaseConnection
+        this.init();
+        
+        ResultSet rs = null;
+        
+        try {
+            
+            String request = "select model, type, rentalDate, returnDate, price  from carrental cr join cars c on cr.idCar = c.idCar where email = ?";
+
+            PreparedStatement preparedStatement = conn.prepareStatement(request);
+            preparedStatement.setString(1, email);
+                 
+            rs = preparedStatement.executeQuery();
+ 
+        } catch (SQLException ex) {
+            Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        //close database connexion
+        this.close();
+        
+        return rs;
+            
+        }
+    
 }
     
     

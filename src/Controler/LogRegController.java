@@ -40,6 +40,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import java.io.IOException;
+import javax.security.auth.login.FailedLoginException;
 
 /**
  *
@@ -94,6 +95,8 @@ public class LogRegController implements Initializable {
     private Label pnStatus;
     @FXML
     private Label pwdStatus;
+    @FXML
+    private Label loginError;
 
     //My Account
     @FXML
@@ -146,11 +149,19 @@ public class LogRegController implements Initializable {
     @FXML
     public void login(ActionEvent event) throws Exception {             
         
-        String email = this.login.getText();
-        String password = Security.hashSaltPswd(this.password.getText());
+        try{
         
-        Customer c = new Customer();
-        c.login(email, password);
+            String email = this.login.getText();
+            String password = Security.hashSaltPswd(this.password.getText());
+
+            Customer c = new Customer();
+            c.login(email, password);
+        
+        }catch(Exception e){
+            loginError.setText("Wrong Password / Email - Try Again !");
+            Thread.sleep(2000);
+        }
+        
         try {
         Stage stage1 = (Stage) back.getScene().getWindow();
         stage1.close();
@@ -162,6 +173,7 @@ public class LogRegController implements Initializable {
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
+           
         }
          
     }
@@ -207,24 +219,29 @@ public class LogRegController implements Initializable {
             } else {
                 Model.Person.userConnected.update(Customer.tableName, "firstName", Customer.primary_key, Model.Person.userConnected.getEmail(), fn.getText());
                 fnStatus.setText("First Name Changed");
+                Model.Person.userConnected.setFirstName(fn.getText());
             }
             if (ln.getText() == null || ln.getText().trim().isEmpty()){
                 lnStatus.setText("");
+                
             } else {
                 Model.Person.userConnected.update(Customer.tableName, "lastName", Customer.primary_key, Model.Person.userConnected.getEmail(), ln.getText());
                 lnStatus.setText("Last Name Changed");
+                Model.Person.userConnected.setLastName(ln.getText());
             }
             if (ad.getText() == null || ad.getText().trim().isEmpty()){
                 adStatus.setText("");
             } else {
                 Model.Person.userConnected.update(Customer.tableName, "adress", Customer.primary_key, Model.Person.userConnected.getEmail(), ad.getText());
                 adStatus.setText("Adress Changed");
+                Model.Person.userConnected.setAdress(ad.getText());
             }
             if (pn.getText() == null || pn.getText().trim().isEmpty()){
                 pnStatus.setText("");
             } else {
                 Model.Person.userConnected.update(Customer.tableName, "phoneNumber", Customer.primary_key, Model.Person.userConnected.getEmail(), pn.getText());
                 pnStatus.setText("Phone Changed");
+                Model.Person.userConnected.setPhoneNumber(pn.getText());
             }
             if (newPassword.getText() == null || newPassword.getText().trim().isEmpty()){
                 pwdStatus.setText("");
@@ -235,7 +252,7 @@ public class LogRegController implements Initializable {
             }
         } catch(Exception e){
             e.printStackTrace();
-            pwdStatus.setText("Something happened"); 
+            pwdStatus.setText("Something happened - Impossible to modify your data"); 
             }
     }     
 

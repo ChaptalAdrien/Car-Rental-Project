@@ -7,13 +7,14 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.security.auth.login.FailedLoginException;
+import Model.Person.*;
 
 
 
 public class Customer extends Person {
     
-    private static String tableName = "customers";
-    private static String primary_key = "email";
+    public static String tableName = "customers";
+    public static String primary_key = "email";
     
     private boolean member;
     private boolean customerType; //0 is particular, 1 is business
@@ -119,5 +120,7 @@ public class Customer extends Person {
     public boolean isCustomerType() {
         return customerType;
     }
- 
+    /*public void ChangePwd(String newPassword){
+        Model.update(Customer.tableName, password, Customer.primary_key, Model.Person.userConnected.getEmail(), newPassword);
+    }*/
 }

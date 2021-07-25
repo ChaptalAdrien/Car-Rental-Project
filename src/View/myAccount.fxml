@@ -25,7 +25,6 @@
       <Text layoutX="466.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" wrappingWidth="90.13671875" />
       <Text layoutX="466.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change password : " wrappingWidth="132.13671875" />
       <Button fx:id="change" layoutX="630.0" layoutY="531.0" mnemonicParsing="false" onAction="#ButtonChangePwd" text="Change !" />
-      <Label layoutX="630.0" layoutY="556.0" prefHeight="17.0" prefWidth="64.0" />
       <Text layoutX="492.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Account">
          <font>
             <Font size="18.0" />
@@ -34,5 +33,11 @@
       <PasswordField fx:id="newPassword" layoutX="465.0" layoutY="531.0" promptText="New password" />
       <Button fx:id="displayMyData" layoutX="910.0" layoutY="13.0" mnemonicParsing="false" onAction="#ButtonDisplayData" text="Display my personnal data" />
       <DatePicker fx:id="birthDate" layoutX="465.0" layoutY="402.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="pwdStatus" layoutX="465.0" layoutY="556.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label fx:id="fnStatus" layoutX="630.0" layoutY="228.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label fx:id="lnStatus" layoutX="630.0" layoutY="274.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label fx:id="adStatus" layoutX="630.0" layoutY="321.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label fx:id="pnStatus" layoutX="630.0" layoutY="364.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="630.0" layoutY="406.0" prefHeight="17.0" prefWidth="149.0" />
    </children>
 </AnchorPane>

@@ -76,6 +76,8 @@ public class LogRegController implements Initializable {
     private Button loginButton;
     @FXML
     private Button hisotry;
+    @FXML
+    private Button registerButton;
 
     //Login
     @FXML

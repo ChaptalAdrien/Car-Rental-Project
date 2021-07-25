@@ -33,6 +33,8 @@ import Model.Person.*;
 import java.util.UUID;
 
 
+
+
 /**
  *
  * @author rouss
@@ -300,7 +302,8 @@ public class RentController implements Initializable{
                 userStatus.setText("Not connected !");
             }
     }
-    
+    public void DateFrom(ActionEvent event) throws Exception{
+    }
 
 
     //MAIN

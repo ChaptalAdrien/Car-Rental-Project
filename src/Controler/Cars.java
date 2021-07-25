@@ -11,5 +11,4 @@ package Controler;
  * @author rouss
  */
 public class Cars {
-    
 }

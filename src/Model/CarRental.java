@@ -15,4 +15,5 @@ public class CarRental {
     private  Agency pickUpAgency;
     private Agency returnAgency;
     
+    
 }

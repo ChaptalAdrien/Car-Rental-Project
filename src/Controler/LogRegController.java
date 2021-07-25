@@ -83,7 +83,16 @@ public class LogRegController implements Initializable {
     @FXML
     private Button logIn;
     @FXML
+    private Label fnStatus;
+    @FXML
+    private Label lnStatus;
+    @FXML
+    private Label adStatus;
+    @FXML
+    private Label pnStatus;
+    @FXML
     private Label pwdStatus;
+
 
     //Event
     @FXML
@@ -160,20 +169,48 @@ public class LogRegController implements Initializable {
     }
     public void ButtonChangePwd(ActionEvent event) throws Exception{
         try{
-         String nPassword = Security.hashSaltPswd(this.newPassword.getText());
-         Model.Person.userConnected.update(Customer.tableName, "password", Customer.primary_key, Model.Person.userConnected.getEmail(), nPassword);
-         pwdStatus.setText("Password changed");
+            if (firstName.getText() == null || firstName.getText().trim().isEmpty()){
+                fnStatus.setText("");
+            } else {
+                Model.Person.userConnected.update(Customer.tableName, "firstName", Customer.primary_key, Model.Person.userConnected.getEmail(), firstName.getText());
+                fnStatus.setText("First Name Changed");
+            }
+            if (lastName.getText() == null || lastName.getText().trim().isEmpty()){
+                lnStatus.setText("");
+            } else {
+                Model.Person.userConnected.update(Customer.tableName, "lastName", Customer.primary_key, Model.Person.userConnected.getEmail(), lastName.getText());
+                lnStatus.setText("Last Name Changed");
+            }
+            if (adress.getText() == null || adress.getText().trim().isEmpty()){
+                adStatus.setText("");
+            } else {
+                Model.Person.userConnected.update(Customer.tableName, "adress", Customer.primary_key, Model.Person.userConnected.getEmail(), adress.getText());
+                adStatus.setText("Adress Changed");
+            }
+            if (phoneNumber.getText() == null || phoneNumber.getText().trim().isEmpty()){
+                pnStatus.setText("");
+            } else {
+                Model.Person.userConnected.update(Customer.tableName, "phoneNumber", Customer.primary_key, Model.Person.userConnected.getEmail(), phoneNumber.getText());
+                pnStatus.setText("Phone Changed");
+            }
+            if (newPassword.getText() == null || newPassword.getText().trim().isEmpty()){
+                pwdStatus.setText("");
+            } else {
+                String nPassword = Security.hashSaltPswd(this.newPassword.getText());
+                Model.Person.userConnected.update(Customer.tableName, "password", Customer.primary_key, Model.Person.userConnected.getEmail(), nPassword);
+                pwdStatus.setText("Phone Changed");
+            }
         } catch(Exception e){
             e.printStackTrace();
-            pwdStatus.setText("Something happened");
-        }
-         
-    }
+            pwdStatus.setText("Something happened"); 
+            }
+    }     
+
     public void ButtonDisplayData(ActionEvent event) throws Exception{
-        firstName.setText(Model.Person.userConnected.getFirstName());
-        lastName.setText(Model.Person.userConnected.getLastName());
-        adress.setText(Model.Person.userConnected.getAdress());
-        phoneNumber.setText(Model.Person.userConnected.getPhoneNumber());
+        firstName.setPromptText(Model.Person.userConnected.getFirstName());
+        lastName.setPromptText(Model.Person.userConnected.getLastName());
+        adress.setPromptText(Model.Person.userConnected.getAdress());
+        phoneNumber.setPromptText(Model.Person.userConnected.getPhoneNumber());
         birthDate.setValue(Model.Person.userConnected.getBirthDate());
     }
 

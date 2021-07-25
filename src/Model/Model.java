@@ -30,7 +30,6 @@ public abstract class Model extends Conf {
         } 
     }
     
-    
     //Close the connexion to the data base
     public void close(){
         try{

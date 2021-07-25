@@ -6,6 +6,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public abstract class Model extends Conf {
     
@@ -168,7 +170,7 @@ public abstract class Model extends Conf {
         
     }
     
-        public ArrayList<History> GetHistory(String email) throws SQLException{
+        public ObservableList<History> GetHistory(String email) throws SQLException{
             
             //initdatabaseConnection
         this.init();
@@ -177,7 +179,7 @@ public abstract class Model extends Conf {
         
         try {
             
-            String request = "select model, type, rentalDate, returnDate, price  from carrental cr join cars c on cr.idCar = c.idCar where email = ?";
+            String request = "select c.model, c.carType, cr.rentalDate, cr.returnDate, cr.price from carrental cr join cars c on cr.idCar = c.idCar where email = ?";
 
             PreparedStatement preparedStatement = conn.prepareStatement(request);
             preparedStatement.setString(1, email);
@@ -188,20 +190,22 @@ public abstract class Model extends Conf {
             Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        //close database connexion
-        this.close();
+
         
        //Object to store into collection
         History h = null;
-        ArrayList<History> data = new ArrayList();
+        ObservableList<History> data = FXCollections.observableArrayList();
+        
         
         while(rs.next()){
             //initialazing h
-            h = new History(rs.getString("model"), rs.getString("type"), rs.getString("rentalDate"), rs.getString("retournDate"), rs.getDouble("price"));
+            h = new History(rs.getString("model"), rs.getString("CarType"), rs.getString("rentalDate"), rs.getString("returnDate"), rs.getDouble("price"));
             
             data.add(h);
         }
         
+        //close database connexion
+        this.close();
         
         return data;
             

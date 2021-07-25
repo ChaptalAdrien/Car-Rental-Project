@@ -48,7 +48,8 @@ public class MainController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/loginPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -63,7 +64,8 @@ public class MainController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/registerPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -77,7 +79,8 @@ public class MainController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/startPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();

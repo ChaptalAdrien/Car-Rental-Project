@@ -102,7 +102,8 @@ public class RentController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);  
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -118,7 +119,8 @@ public class RentController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -133,7 +135,8 @@ public class RentController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);  
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -165,7 +168,8 @@ public class RentController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         
         } catch(Exception e) {
@@ -195,7 +199,8 @@ public class RentController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -224,7 +229,8 @@ public class RentController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -253,7 +259,8 @@ public class RentController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -269,7 +276,8 @@ public class RentController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
         } catch(Exception e) {
            e.printStackTrace();
@@ -296,7 +304,8 @@ public class RentController implements Initializable{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/myAccount.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
                 stage.show();
             }catch(Exception e) {
                 e.printStackTrace();

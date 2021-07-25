@@ -71,8 +71,6 @@ public class LogRegController implements Initializable {
     @FXML
     private PasswordField newPassword;
     @FXML
-    private Button backToMainButton;
-    @FXML
     private Button back;
     @FXML
     private Button loginButton;
@@ -114,7 +112,7 @@ public class LogRegController implements Initializable {
         
         c.register();
         try {
-        Stage stage1 = (Stage) backToMainButton.getScene().getWindow();
+        Stage stage1 = (Stage) back.getScene().getWindow();
         stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
@@ -139,7 +137,7 @@ public class LogRegController implements Initializable {
         Customer c = new Customer();
         c.login(email, password);
         try {
-        Stage stage1 = (Stage) backToMainButton.getScene().getWindow();
+        Stage stage1 = (Stage) back.getScene().getWindow();
         stage1.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();

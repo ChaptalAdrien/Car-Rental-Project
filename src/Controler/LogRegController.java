@@ -95,6 +95,18 @@ public class LogRegController implements Initializable {
     @FXML
     private Label pwdStatus;
 
+    //My Account
+    @FXML
+    private TextField fn;
+    @FXML
+    private TextField ln;
+    @FXML
+    private TextField ad;
+    @FXML
+    private TextField pn;
+    @FXML
+    private DatePicker bd;
+
 
     //Event
     @FXML
@@ -162,7 +174,7 @@ public class LogRegController implements Initializable {
         try {
         Stage stage1 = (Stage) back.getScene().getWindow();
         stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/mainPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
@@ -172,30 +184,46 @@ public class LogRegController implements Initializable {
            e.printStackTrace();
         }
     }
+    @FXML
+    public void ButtonBackAccount(ActionEvent event) throws Exception {             
+        try {
+        Stage stage1 = (Stage) back.getScene().getWindow();
+        stage1.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/myAccount.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false); 
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+        }
+    }
+    @FXML
     public void ButtonChangePwd(ActionEvent event) throws Exception{
         try{
-            if (firstName.getText() == null || firstName.getText().trim().isEmpty()){
+            if (fn.getText() == null || fn.getText().trim().isEmpty()){
                 fnStatus.setText("");
             } else {
-                Model.Person.userConnected.update(Customer.tableName, "firstName", Customer.primary_key, Model.Person.userConnected.getEmail(), firstName.getText());
+                Model.Person.userConnected.update(Customer.tableName, "firstName", Customer.primary_key, Model.Person.userConnected.getEmail(), fn.getText());
                 fnStatus.setText("First Name Changed");
             }
-            if (lastName.getText() == null || lastName.getText().trim().isEmpty()){
+            if (ln.getText() == null || ln.getText().trim().isEmpty()){
                 lnStatus.setText("");
             } else {
-                Model.Person.userConnected.update(Customer.tableName, "lastName", Customer.primary_key, Model.Person.userConnected.getEmail(), lastName.getText());
+                Model.Person.userConnected.update(Customer.tableName, "lastName", Customer.primary_key, Model.Person.userConnected.getEmail(), ln.getText());
                 lnStatus.setText("Last Name Changed");
             }
-            if (adress.getText() == null || adress.getText().trim().isEmpty()){
+            if (ad.getText() == null || ad.getText().trim().isEmpty()){
                 adStatus.setText("");
             } else {
-                Model.Person.userConnected.update(Customer.tableName, "adress", Customer.primary_key, Model.Person.userConnected.getEmail(), adress.getText());
+                Model.Person.userConnected.update(Customer.tableName, "adress", Customer.primary_key, Model.Person.userConnected.getEmail(), ad.getText());
                 adStatus.setText("Adress Changed");
             }
-            if (phoneNumber.getText() == null || phoneNumber.getText().trim().isEmpty()){
+            if (pn.getText() == null || pn.getText().trim().isEmpty()){
                 pnStatus.setText("");
             } else {
-                Model.Person.userConnected.update(Customer.tableName, "phoneNumber", Customer.primary_key, Model.Person.userConnected.getEmail(), phoneNumber.getText());
+                Model.Person.userConnected.update(Customer.tableName, "phoneNumber", Customer.primary_key, Model.Person.userConnected.getEmail(), pn.getText());
                 pnStatus.setText("Phone Changed");
             }
             if (newPassword.getText() == null || newPassword.getText().trim().isEmpty()){
@@ -210,9 +238,6 @@ public class LogRegController implements Initializable {
             pwdStatus.setText("Something happened"); 
             }
     }     
-
-    public void ButtonDisplayData(ActionEvent event) throws Exception{
-    }
 
     public void ButtonHistory(ActionEvent event) throws Exception{
         try {
@@ -232,11 +257,15 @@ public class LogRegController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        firstName.setPromptText(Model.Person.userConnected.getFirstName());
-        lastName.setPromptText(Model.Person.userConnected.getLastName());
-        adress.setPromptText(Model.Person.userConnected.getAdress());
-        phoneNumber.setPromptText(Model.Person.userConnected.getPhoneNumber());
-        birthDate.setValue(Model.Person.userConnected.getBirthDate());
+        if(Model.Person.userConnected != null){
+            fn.setPromptText(Model.Person.userConnected.getFirstName());
+            ln.setPromptText(Model.Person.userConnected.getLastName());
+            ad.setPromptText(Model.Person.userConnected.getAdress());
+            pn.setPromptText(Model.Person.userConnected.getPhoneNumber());
+            bd.setValue(Model.Person.userConnected.getBirthDate());
+
+        }
+        
     }    
     
 }

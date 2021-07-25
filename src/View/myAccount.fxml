@@ -13,10 +13,11 @@
             <Image url="@images/mainBackground.png" />
          </image>
       </ImageView>
-      <TextField fx:id="firstName" layoutX="467.0" layoutY="224.0" />
-      <TextField fx:id="lastName" layoutX="466.0" layoutY="270.0" />
-      <TextField fx:id="adress" layoutX="466.0" layoutY="317.0" />
-      <TextField fx:id="phoneNumber" layoutX="466.0" layoutY="360.0" />
+      <Button fx:id="history" layoutX="910.0" layoutY="13.0" mnemonicParsing="false" onAction="#ButtonHistory" prefHeight="25.0" prefWidth="156.0" text="History" />
+      <TextField fx:id="fn" layoutX="467.0" layoutY="224.0" />
+      <TextField fx:id="ln" layoutX="466.0" layoutY="270.0" />
+      <TextField fx:id="ad" layoutX="466.0" layoutY="317.0" />
+      <TextField fx:id="pn" layoutX="466.0" layoutY="360.0" />
       <Button fx:id="back" layoutX="211.0" layoutY="681.0" mnemonicParsing="false" onAction="#ButtonBack" text="Back" />
       <Text layoutX="466.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name :" wrappingWidth="90.13671875" />
       <Text layoutX="466.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name :" wrappingWidth="90.13671875" />
@@ -31,14 +32,12 @@
          </font>
       </Text>
       <PasswordField fx:id="newPassword" layoutX="465.0" layoutY="531.0" promptText="New password" />
-      <Button fx:id="displayMyData" layoutX="910.0" layoutY="13.0" mnemonicParsing="false" onAction="#ButtonDisplayData" text="Display my personnal data" />
-      <DatePicker fx:id="birthDate" layoutX="465.0" layoutY="402.0" prefHeight="25.0" prefWidth="149.0" />
+      <DatePicker fx:id="bd" layoutX="465.0" layoutY="402.0" prefHeight="25.0" prefWidth="149.0" />
       <Label fx:id="pwdStatus" layoutX="465.0" layoutY="556.0" prefHeight="17.0" prefWidth="149.0" />
       <Label fx:id="fnStatus" layoutX="630.0" layoutY="228.0" prefHeight="17.0" prefWidth="149.0" />
       <Label fx:id="lnStatus" layoutX="630.0" layoutY="274.0" prefHeight="17.0" prefWidth="149.0" />
       <Label fx:id="adStatus" layoutX="630.0" layoutY="321.0" prefHeight="17.0" prefWidth="149.0" />
       <Label fx:id="pnStatus" layoutX="630.0" layoutY="364.0" prefHeight="17.0" prefWidth="149.0" />
       <Label layoutX="630.0" layoutY="406.0" prefHeight="17.0" prefWidth="149.0" />
-      <Button fx:id="history" layoutX="912.0" layoutY="46.0" mnemonicParsing="false" onAction="#ButtonHistory" prefHeight="25.0" prefWidth="156.0" text="History" />
    </children>
 </AnchorPane>

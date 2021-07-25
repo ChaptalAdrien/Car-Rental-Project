@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0">
          <image>
-            <Image url="@images\mainBackground.png" />
+            <Image url="@images/mainBackground.png" />
          </image>
       </ImageView>
       <ComboBox fx:id="comboAgency" layoutX="225.0" layoutY="188.0" prefWidth="150.0" style="-fx-background-color: #db9f27;" />

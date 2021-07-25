@@ -28,6 +28,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.text.Text;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import Model.Person.*;
@@ -63,8 +64,6 @@ public class RentController implements Initializable{
     private Button select4;
     @FXML 
     private Label emailDisplay;
-    @FXML 
-    private Label userStatus;
 
 
     //Page Checkout
@@ -94,7 +93,12 @@ public class RentController implements Initializable{
     //RESA CONFIRMED
     @FXML
     private Button backCars;
-
+    
+    //CARS
+    @FXML
+    private Text welcome;
+    @FXML
+    private Label tag;
 
 
 
@@ -147,131 +151,7 @@ public class RentController implements Initializable{
            e.printStackTrace();
           }
     }
-    //Cars selection
-    @FXML
-    public void ButtonS1(ActionEvent event) throws Exception {
-        
-        Car car = new Car("0", "Dacia Sandero", "Familliale");
-        Customer customer;
-        String idRent = UUID.randomUUID().toString();
-        
-        //if nobody is connected, we set the booking to the guest
-        if(Person.userConnected != null){
-            customer = (Customer) Person.userConnected;
-        }else{
-            customer = Customer.getGuest(); 
-        }
-        
-        CarRental cr = new CarRental(idRent, customer, car);
-        CarRental.setOnGoingRent(cr);
-        
-        //CarRental cr = new CarRental();
-        
-        try {
-        Stage stage1 = (Stage) logreg.getScene().getWindow();
-        stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.setResizable(false);   
-                stage.show();
-        
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-    }
-    @FXML
-    public void ButtonS2(ActionEvent event) throws Exception {  
-        
-        Car car = new Car("1", "Peugeot 308", "Compacte");
-        Customer customer;
-        String idRent = UUID.randomUUID().toString();
-        
-        //if nobody is connected, we set the booking to the guest
-        if(Person.userConnected != null){
-            customer = (Customer) Person.userConnected;
-        }else{
-            customer = Customer.getGuest(); 
-        }
-        
-        CarRental cr = new CarRental(idRent, customer, car);
-        CarRental.setOnGoingRent(cr);
-        
-        try {
-        Stage stage1 = (Stage) logreg.getScene().getWindow();
-        stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.setResizable(false);   
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-    }
-    @FXML
-    public void ButtonS3(ActionEvent event) throws Exception { 
-        
-        Car car = new Car("2", "Mercedes 4x4", "4x4");
-        Customer customer;
-        String idRent = UUID.randomUUID().toString();
-        
-        //if nobody is connected, we set the booking to the guest
-        if(Person.userConnected != null){
-            customer = (Customer) Person.userConnected;
-        }else{
-            customer = Customer.getGuest(); 
-        }
-        
-        CarRental cr = new CarRental(idRent, customer, car);
-        CarRental.setOnGoingRent(cr);
-        
-        try {
-        Stage stage1 = (Stage) logreg.getScene().getWindow();
-        stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.setResizable(false);   
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-    }
-    @FXML
-    public void ButtonS4(ActionEvent event) throws Exception {
-        
-        Car car = new Car("3", "Rolls Royce Ghost", "Luxe");
-        Customer customer;
-        String idRent = UUID.randomUUID().toString();
-        
-        //if nobody is connected, we set the booking to the guest
-        if(Person.userConnected != null){
-            customer = (Customer) Person.userConnected;
-        }else{
-            customer = Customer.getGuest(); 
-        }
-        
-        CarRental cr = new CarRental(idRent, customer, car);
-        CarRental.setOnGoingRent(cr);
-        
-        try {
-        Stage stage1 = (Stage) logreg.getScene().getWindow();
-        stage1.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/checkOutPage.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.setResizable(false);   
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-    }
-    
+   
     //CHECKOUT
     @FXML
     public void Back(ActionEvent event) throws Exception {             
@@ -328,25 +208,6 @@ public class RentController implements Initializable{
         }
     }   
     @FXML
-    public void ButtonMyAccount(ActionEvent event) throws Exception{
-        if (Model.Person.userConnected != null){
-           try {
-            Stage stage1 = (Stage) logreg.getScene().getWindow();
-            stage1.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/myAccount.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.setResizable(false);   
-                stage.show();
-            }catch(Exception e) {
-                e.printStackTrace();
-          } 
-        }else{
-                userStatus.setText("Not connected !");
-            }
-    }
-    @FXML
     public void DateFrom(ActionEvent event) throws Exception{
         returnDate.setVisible(true);
     }
@@ -387,7 +248,5 @@ public class RentController implements Initializable{
     //MAIN
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    }  
-
+    }
 }
- 

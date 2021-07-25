@@ -169,6 +169,10 @@ public abstract class Model extends Conf {
         
     }
     
+        //public ResultSet GetHistory(Customer customer){
+        
+    //}
+    
 }
     
     

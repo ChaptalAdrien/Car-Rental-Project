@@ -231,7 +231,7 @@ public class LogRegController implements Initializable {
             } else {
                 String nPassword = Security.hashSaltPswd(this.newPassword.getText());
                 Model.Person.userConnected.update(Customer.tableName, "password", Customer.primary_key, Model.Person.userConnected.getEmail(), nPassword);
-                pwdStatus.setText("Phone Changed");
+                pwdStatus.setText("Password Changed");
             }
         } catch(Exception e){
             e.printStackTrace();

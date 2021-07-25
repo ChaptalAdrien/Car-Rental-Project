@@ -89,6 +89,8 @@ public class RentController implements Initializable{
     private DatePicker returnDate;
     @FXML
     private Label totalPrice;
+    @FXML
+    private Label dateStatus;
 
     //RESA CONFIRMED
     @FXML
@@ -224,7 +226,7 @@ public class RentController implements Initializable{
             String str = String.valueOf(tprice);
             totalPrice.setText(str);
         }else{
-            System.out.println("Please select valide date");
+            dateStatus.setText("Please select valid dates");
         }
         
     }

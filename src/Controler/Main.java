@@ -29,7 +29,8 @@ public class Main extends Application{
         stage.setResizable(false);
         stage.show();
         //stage.setOnCloseRequest(e -> Platform.exit());
-
+        
+        
     }
     
     /**

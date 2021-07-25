@@ -219,7 +219,7 @@ public class LocationController implements Initializable{
                 stage.show();
             }catch(Exception e) {
                 e.printStackTrace();
-          }
+          } 
         }else{
                 userStatus.setText("Not connected !");
             }

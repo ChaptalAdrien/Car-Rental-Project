@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.HistoryController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1080.0">
@@ -18,7 +17,7 @@
         <columns>
           <TableColumn prefWidth="75.0" text="Car" />
           <TableColumn prefWidth="75.0" text="Type" />
-            <TableColumn prefWidth="75.0" text="Location Date" />
+            <TableColumn prefWidth="75.0" text="Start Rent Date" />
             <TableColumn prefWidth="75.0" text="End Location" />
             <TableColumn prefWidth="75.0" text="Price" />
         </columns>

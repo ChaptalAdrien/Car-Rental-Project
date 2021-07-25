@@ -164,7 +164,8 @@ public class LogRegController implements Initializable {
          Model.Person.userConnected.update(Customer.tableName, "password", Customer.primary_key, Model.Person.userConnected.getEmail(), nPassword);
          pwdStatus.setText("Password changed");
         } catch(Exception e){
-         pwdStatus.setText("Something happened");
+            e.printStackTrace();
+            pwdStatus.setText("Something happened");
         }
          
     }

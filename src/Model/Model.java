@@ -123,7 +123,7 @@ public abstract class Model extends Conf {
     }
     
     //Save the data into the specified table 
-    public void Save(ArrayList data, String table){
+    public void save(ArrayList data, String table){
         
         //init database connexion
         this.init();

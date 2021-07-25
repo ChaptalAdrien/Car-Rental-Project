@@ -19,13 +19,16 @@ public class Customer extends Person {
     private boolean member;
     private boolean customerType; //0 is particular, 1 is business
 
+    //Private constructor to construct the guest : we only need to give him the id (email);
+    private Customer(String email){
+        this.email = email;
+    }
     
     public Customer(){
         
     }
     
     public Customer(String email, String firstName, String lastName, String phoneNumber, String adress, LocalDate birthDate, boolean member, boolean customerType, String password) {
-        
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -59,7 +62,7 @@ public class Customer extends Person {
         data.add(this.password);
         
         try{
-            this.Save(data, Customer.tableName);
+            this.save(data, Customer.tableName);
         }catch(Exception e){
              //throw new exception();    
         }
@@ -120,6 +123,14 @@ public class Customer extends Person {
     public boolean isCustomerType() {
         return customerType;
     }
+    
+    //Static method to get the "guest" customer
+    public static Customer getGuest(){
+        Customer guest = new Customer("guest@guest.com");
+        return guest;
+    }
+    
+    
     /*public void ChangePwd(String newPassword){
         Model.update(Customer.tableName, password, Customer.primary_key, Model.Person.userConnected.getEmail(), newPassword);
     }*/

@@ -6,6 +6,12 @@
 
 package Controler;
 //import Controler.Main;
+
+import Model.Car;
+import Model.Customer;
+import Model.CarRental;
+import Model.Person;
+
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,13 +30,14 @@ import javafx.scene.control.DatePicker;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import Model.Person.*;
+import java.util.UUID;
 
 
 /**
  *
  * @author rouss
  */
-public class LocationController implements Initializable{
+public class RentController implements Initializable{
 
     //Button
     @FXML
@@ -125,6 +132,23 @@ public class LocationController implements Initializable{
     //Cars selection
     @FXML
     public void ButtonS1(ActionEvent event) throws Exception {
+        
+        Car car = new Car("0", "Dacia Sandero", "Familliale");
+        Customer customer;
+        String idRent = UUID.randomUUID().toString();
+        
+        //if nobody is connected, we set the booking to the guest
+        if(Person.userConnected != null){
+            customer = (Customer) Person.userConnected;
+        }else{
+            customer = Customer.getGuest(); 
+        }
+        
+        CarRental cr = new CarRental(idRent, customer, car);
+        CarRental.setOnGoingRent(cr);
+        
+        //CarRental cr = new CarRental();
+        
         try {
         Stage stage1 = (Stage) logreg.getScene().getWindow();
         stage1.close();
@@ -138,7 +162,22 @@ public class LocationController implements Initializable{
           }
     }
     @FXML
-    public void ButtonS2(ActionEvent event) throws Exception {             
+    public void ButtonS2(ActionEvent event) throws Exception {  
+        
+        Car car = new Car("1", "Peugeot 208", "Compacte");
+        Customer customer;
+        String idRent = UUID.randomUUID().toString();
+        
+        //if nobody is connected, we set the booking to the guest
+        if(Person.userConnected != null){
+            customer = (Customer) Person.userConnected;
+        }else{
+            customer = Customer.getGuest(); 
+        }
+        
+        CarRental cr = new CarRental(idRent, customer, car);
+        CarRental.setOnGoingRent(cr);
+        
         try {
         Stage stage1 = (Stage) logreg.getScene().getWindow();
         stage1.close();
@@ -152,7 +191,22 @@ public class LocationController implements Initializable{
           }
     }
     @FXML
-    public void ButtonS3(ActionEvent event) throws Exception {             
+    public void ButtonS3(ActionEvent event) throws Exception { 
+        
+        Car car = new Car("2", "Mercedes 4x4", "4x4");
+        Customer customer;
+        String idRent = UUID.randomUUID().toString();
+        
+        //if nobody is connected, we set the booking to the guest
+        if(Person.userConnected != null){
+            customer = (Customer) Person.userConnected;
+        }else{
+            customer = Customer.getGuest(); 
+        }
+        
+        CarRental cr = new CarRental(idRent, customer, car);
+        CarRental.setOnGoingRent(cr);
+        
         try {
         Stage stage1 = (Stage) logreg.getScene().getWindow();
         stage1.close();
@@ -166,7 +220,22 @@ public class LocationController implements Initializable{
           }
     }
     @FXML
-    public void ButtonS4(ActionEvent event) throws Exception {             
+    public void ButtonS4(ActionEvent event) throws Exception {
+        
+        Car car = new Car("3", "Rolls Royce Ghost", "Luxe");
+        Customer customer;
+        String idRent = UUID.randomUUID().toString();
+        
+        //if nobody is connected, we set the booking to the guest
+        if(Person.userConnected != null){
+            customer = (Customer) Person.userConnected;
+        }else{
+            customer = Customer.getGuest(); 
+        }
+        
+        CarRental cr = new CarRental(idRent, customer, car);
+        CarRental.setOnGoingRent(cr);
+        
         try {
         Stage stage1 = (Stage) logreg.getScene().getWindow();
         stage1.close();

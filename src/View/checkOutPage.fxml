@@ -26,7 +26,10 @@
       <Text layoutX="279.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From :" wrappingWidth="134.13671875" />
       <Text layoutX="279.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To :" wrappingWidth="134.13671875" />
       <Text layoutX="407.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payement Information" wrappingWidth="185.13671875" />
-      <Label fx:id="totalPrice" layoutX="590.0" layoutY="273.0" prefHeight="38.0" prefWidth="134.0" />
+      <Label fx:id="totalPrice" layoutX="590.0" layoutY="273.0" prefHeight="38.0" prefWidth="134.0" text="0€">
+         <font>
+            <Font size="26.0" />
+         </font></Label>
       <Text layoutX="431.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :" wrappingWidth="126.28515625">
          <font>
             <Font size="20.0" />

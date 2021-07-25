@@ -300,6 +300,7 @@ public class RentController implements Initializable{
                 userStatus.setText("Not connected !");
             }
     }
+    
 
 
     //MAIN

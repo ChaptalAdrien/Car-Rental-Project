@@ -28,6 +28,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 
+
 public class HistoryController implements Initializable{
     @FXML
     private TableView historyTable;

@@ -54,6 +54,30 @@ public class Car extends Model{
     }
     
     //METHODS
+    //return the daily price of the car
+    public double getDailyPrice(){
+        
+        double dailyPrice = 0;
+        
+        switch (this.idCar) {
+            case "0":
+                dailyPrice = 25;
+                break;
+            case "1":
+                dailyPrice = 70;
+                break;
+            case "2":
+                dailyPrice = 150;
+                break;
+            case "3":
+                dailyPrice = 500;
+                break;
+            default:
+                break;
+        }
+        
+        return dailyPrice;
+    }
     
     //Select this car in database
     public void selectCar(String idCar){

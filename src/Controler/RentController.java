@@ -91,6 +91,10 @@ public class RentController implements Initializable{
     @FXML
     private Label totalPrice;
 
+    //RESA CONFIRMED
+    @FXML
+    private Button backCars;
+
 
 
 
@@ -309,7 +313,18 @@ public class RentController implements Initializable{
             }
             
             //REDIRECTION
-            
+            try {
+            Stage stage1 = (Stage) back.getScene().getWindow();
+            stage1.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/resaConfirmed.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
+                stage.show();
+            }catch(Exception e) {
+                e.printStackTrace();
+          } 
         }
     }   
     @FXML
@@ -351,6 +366,23 @@ public class RentController implements Initializable{
             System.out.println("Please select valide date");
         }
         
+    }
+
+    //RESA
+    @FXML
+    public void ButtonBackCars(ActionEvent event) throws Exception{
+        try {
+            Stage stage1 = (Stage) backCars.getScene().getWindow();
+            stage1.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/carsPage.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));
+                stage.setResizable(false);   
+                stage.show();
+            }catch(Exception e) {
+                e.printStackTrace();
+          } 
     }
     //MAIN
     @Override
